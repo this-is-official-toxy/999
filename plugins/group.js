@@ -86,23 +86,14 @@ newCommand(
           desc: Lang.ADD_DESC},
          (async (message, match) => { 
 
-    var im = await checkAdmin(message);
+    var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
     if (match[1] !== '') {
-        let user;
-        if (match[1].includes('+') {
-           user = match[1].replace('+', '')
-        } else if (match[1].includes(' ') {
-           user = match[1].replace(' ', '')
-        } else {
-           user = match[1]
-        }
-
-        let exists = await message.client.isOnWhatsApp(match[1])
-        if (!exists) await message.client.sendMessage(message.jid, USER_NOT_EXISTS, MessageType.text);
-        await message.client.groupAdd(message.jid, [user + "@s.whatsapp.net"]);
-        await message.client.sendMessage(message.jid,'```' + '@' + user.split'@'[0] + ' ' + Lang.ADDED +'```', MessageType.text);
+        match[1].split(' ').map(async (user) => {
+            await message.client.groupAdd(message.jid, [user + "@s.whatsapp.net"]);
+            await message.client.sendMessage(message.jid,'```' + user + ' ' + Lang.ADDED +'```');
+        });
     } else {
         return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
     }
