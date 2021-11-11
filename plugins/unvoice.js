@@ -1,4 +1,4 @@
-let WhatsAlexa = require('../events');
+let { newCommand } = require('../events');
 let {MessageType,Mimetype} = require('@adiwajshing/baileys');
 let fs = require('fs');
 let ffmpeg = require('fluent-ffmpeg');
@@ -10,7 +10,11 @@ let Lang = Language.getString('unvoice');
 
 if (Config.WORKTYPE == 'private') {
 
-    WhatsAlexa.addCommand({pattern: 'unvoice', fromMe: true, desc: Lang.UV_DESC}, (async (message, match) => {    
+    newCommand(
+             {pattern: 'unvoice',
+              private: true,
+              desc: Lang.UV_DESC},
+              (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.UV_REPLY, MesssageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         var downloading = await message.client.sendMessage(message.jid,Lang.UV_PROC,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
@@ -31,7 +35,11 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     
-    WhatsAlexa.addCommand({pattern: 'unaudio', fromMe: true, desc: Lang.UA_DESC}, (async (message, match) => {    
+    newCommand(
+             {pattern: 'unaudio',
+              private: true,
+              desc: Lang.UA_DESC},
+             (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.UA_REPLY, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         var downloading = await message.client.sendMessage(message.jid,Lang.UA_PROC,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
@@ -54,7 +62,11 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    WhatsAlexa.addCommand({pattern: 'unvoice', fromMe: false, desc: Lang.UV_DESC}, (async (message, match) => {    
+    newCommand(
+             {pattern: 'unvoice',
+              private: false,
+              desc: Lang.UV_DESC},
+              (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.UV_REPLY, MesssageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         var downloading = await message.client.sendMessage(message.jid,Lang.UV_PROC,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
@@ -75,7 +87,11 @@ else if (Config.WORKTYPE == 'public') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     
-    WhatsAlexa.addCommand({pattern: 'unaudio', fromMe: false, desc: Lang.UA_DESC}, (async (message, match) => {    
+    newCommand(
+             {pattern: 'unaudio',
+              private: false,
+              desc: Lang.UA_DESC},
+             (async (message, match) => {
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid, Lang.UA_REPLY, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         var downloading = await message.client.sendMessage(message.jid,Lang.UA_PROC,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});

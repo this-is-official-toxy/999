@@ -1,4 +1,4 @@
-let WhatsAlexa = require('../events');
+let { newCommand } = require('../events');
 let Config = require('../config');
 let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let fs = require('fs');
@@ -8,7 +8,11 @@ let Lang = Language.getString('ttp');
 let td = Config.WORKTYPE == 'public' ? false : true
 let tdc = '*Made By WhatsAlexa*'
 
-    WhatsAlexa.addCommand({pattern: 'textmaker', fromMe: td, desc: Lang.TEXT_MAKER}, (async (message, match) => {    
+    newCommand(
+             {pattern: 'textmaker',
+              private: td,
+              desc: Lang.TEXT_MAKER},
+             (async (message, match) => {    
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -18,7 +22,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'glitch ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'glitch ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -35,7 +43,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'blackpink ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -45,7 +57,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'flame ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'flame ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -56,7 +72,11 @@ let tdc = '*Made By WhatsAlexa*'
     }));
 
 
-    WhatsAlexa.addCommand({pattern: 'joker ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'joker ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -66,7 +86,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'pokemon ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'pokemon ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -76,7 +100,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'marvel ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'marvel ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -93,7 +121,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     })); 
 
-    WhatsAlexa.addCommand({pattern: 'metalblue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'metalblue ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -103,7 +135,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'metalpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'metalpink ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -113,7 +149,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'holographic ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'holographic ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -123,7 +163,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'minion ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'minion ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -133,7 +177,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'halloween ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'halloween ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -143,7 +191,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'sparkling ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'sparkling ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -160,7 +212,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'watercolour ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+            {pattern: 'watercolour ?(.*)',
+             private: td,
+             hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -170,7 +226,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'ninjalogo ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.NEED_WORD);
 
@@ -180,7 +240,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'neonlight ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'neonlight ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -190,7 +254,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'sandwriting ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'sandwriting ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -200,7 +268,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'cloud ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'cloud ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -210,7 +282,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'pornhub ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'pornhub ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -227,7 +303,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'snow ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'snow ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -237,7 +317,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'metalgold ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'metalgold ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -247,7 +331,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'glue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'glue ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -257,7 +345,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'led ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'led ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+             (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -274,7 +366,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'luxury ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+              {pattern: 'luxury ?(.*)',
+               private: td,
+               hideFromCommandList: true},
+               (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -284,7 +380,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'blood ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'blood ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -294,7 +394,11 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: 'blackpink ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -304,12 +408,17 @@ let tdc = '*Made By WhatsAlexa*'
 
     }));
 
-    WhatsAlexa.addCommand({pattern: '3dtext ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    newCommand(
+             {pattern: '3dtext ?(.*)',
+              private: td,
+              hideFromCommandList: true},
+              (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/text3d?text=${match[1]}`, { responseType: 'arraybuffer' })
+    var  webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/text3d?text=${match[1]}`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: tdc, contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
 
     }));
+  

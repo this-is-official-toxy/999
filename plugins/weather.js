@@ -1,4 +1,4 @@
-let WhatsAlexa = require('../events');
+let { newCommand } = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let got = require('got');
 let fs = require('fs');
@@ -8,7 +8,11 @@ let Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
-    WhatsAlexa.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
+    newCommand(
+             {pattern: 'weather ?(.*)',
+              desc: Lang.WEATHER_DESC,
+              private: true},
+              async (message, match) => {
 
 	    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_LOCATION, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
@@ -28,7 +32,11 @@ if (Config.WORKTYPE == 'private') {
 }
 if (Config.WORKTYPE == 'public') {
 
-    WhatsAlexa.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
+    newCommand(
+             {pattern: 'weather ?(.*)',
+              desc: Lang.WEATHER_DESC,
+              private: false},
+              async (message, match) => {
 
 	    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_LOCATION, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;

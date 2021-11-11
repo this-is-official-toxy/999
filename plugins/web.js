@@ -1,4 +1,4 @@
-let WhatsAlexa = require('../events');
+let { newCommand } = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let TinyURL = require('tinyurl');
 let fs = require('fs');
@@ -9,7 +9,13 @@ let SLang = Language.getString('webss');
 
 if (Config.WORKTYPE == 'private') {
 
-    WhatsAlexa.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
+    newCommand(
+             {pattern: 'ping',
+              private: true,
+              deleteCommand: false,
+              desc: Lang.PING_DESC},
+              (async (message, match) => {
+
        var start = new Date().getTime();
        await message.client.sendMessage(message.jid, '```Measuring Ping!```', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
        var end = new Date().getTime();
@@ -18,7 +24,11 @@ if (Config.WORKTYPE == 'private') {
          message.jid,'\n\n*Ping -* ```' + (end - start) + 'ms```\n\n', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
     }));
 
-    WhatsAlexa.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+    newCommand(
+             {pattern: 'short ?(.*)',
+              private: true,
+              desc: Lang.URL},
+             (async (message, match) => {
 
          if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
 
@@ -32,7 +42,13 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
     
-    WhatsAlexa.addCommand({pattern: 'ping', fromMe: false, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
+    newCommand(
+             {pattern: 'ping',
+              private: false,
+              deleteCommand: false,
+              desc: Lang.PING_DESC},
+              (async (message, match) => {
+
        var start = new Date().getTime();
        await message.client.sendMessage(message.jid, '```Measuring Ping!```', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
        var end = new Date().getTime();
@@ -41,7 +57,11 @@ else if (Config.WORKTYPE == 'public') {
          message.jid,'\n\n*WhatsAlexa Ping -* ```' + (end - start) + 'ms```\n\n', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
     }));
 
-    WhatsAlexa.addCommand({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
+    newCommand(
+             {pattern: 'short ?(.*)',
+              private: false,
+              desc: Lang.URL},
+             (async (message, match) => {
 
          if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
 
