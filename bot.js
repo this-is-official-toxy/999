@@ -356,9 +356,9 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             return sonuc.includes(true);
         }
 
-          let og = config.ANTIFAKENUM
+          let og = config.COUNTRYCODE.replace('+', '')
 
-          if (config.ANTIFAKENUM !== 'false' && msg.messageStubParameters[0].startsWith(og)) {
+          if (config.ANTIFAKENUM !== 'false' && !msg.messageStubParameters[0].startsWith(og)) {
              let admin = await checkImAdmin(conn);
              if (!admin) return;
              return await conn.groupRemove(msg.key.remoteJid, [msg.messageStubParameters[0]]);
