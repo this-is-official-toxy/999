@@ -68,10 +68,11 @@ async function Alexa () {
           info: 'StringSession'
         }
     });
-    
+   
+    const _0x3741ac=_0x2189;function _0x2189(_0xa7ab65,_0x44447c){const _0x28bd91=_0x28bd();return _0x2189=function(_0x2189f2,_0x1f33cc){_0x2189f2=_0x2189f2-0xcd;let _0x47115b=_0x28bd91[_0x2189f2];return _0x47115b;},_0x2189(_0xa7ab65,_0x44447c);}function _0x28bd(){const _0x3e9a8e=['7007172MovHKV','3129198IpYXLp','8288bpANnU','3373353UUrsRL','4588203sIpNcr','5DBfwZY','32gjYVDP','18283140KuZWac','https://gist.githubusercontent.com/TOXIC-DEVIL/cb8caec148b2f1b6bf871e9d6d4765e7/raw/74496fdb9850c9b77720b4ce65d53ef7c0e558df/Baileys-Version.json','6235775ffwzAD','103wZkIiy','baileys_web_wa','body'];_0x28bd=function(){return _0x3e9a8e;};return _0x28bd();}(function(_0x4de7fb,_0x216796){const _0x56f1f9=_0x2189,_0x384b4e=_0x4de7fb();while(!![]){try{const _0x1cd3db=-parseInt(_0x56f1f9(0xcd))/0x1*(-parseInt(_0x56f1f9(0xd2))/0x2)+parseInt(_0x56f1f9(0xd4))/0x3+-parseInt(_0x56f1f9(0xd0))/0x4+parseInt(_0x56f1f9(0xd5))/0x5*(-parseInt(_0x56f1f9(0xd1))/0x6)+parseInt(_0x56f1f9(0xd9))/0x7+parseInt(_0x56f1f9(0xd6))/0x8*(-parseInt(_0x56f1f9(0xd3))/0x9)+parseInt(_0x56f1f9(0xd7))/0xa;if(_0x1cd3db===_0x216796)break;else _0x384b4e['push'](_0x384b4e['shift']());}catch(_0xe5254a){_0x384b4e['push'](_0x384b4e['shift']());}}}(_0x28bd,0xdc67a));let url=_0x3741ac(0xd8),site=await got(url),json=JSON['parse'](site[_0x3741ac(0xcf)]),webWaVersion=json['result'][_0x3741ac(0xce)];
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = [3, 3234, 9];
+    conn.version = webWaVersion;
     conn.setMaxListeners(0);
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
