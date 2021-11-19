@@ -1,215 +1,285 @@
-const _0x21f29a = _0x363c;
-(function (_0x448f8b, _0x386de3) {
-  const _0x8b50f4 = _0x363c,
-    _0x221d6a = _0x448f8b();
+function _0x1020(_0x2fca91, _0x3d7044) {
+  const _0x7c2c6b = _0x7c2c();
+  return (
+    (_0x1020 = function (_0x10206b, _0x26b99c) {
+      _0x10206b = _0x10206b - 0xd6;
+      let _0x4782f5 = _0x7c2c6b[_0x10206b];
+      return _0x4782f5;
+    }),
+    _0x1020(_0x2fca91, _0x3d7044)
+  );
+}
+const _0x47e739 = _0x1020;
+(function (_0x16032e, _0xa87ede) {
+  const _0x1d4137 = _0x1020,
+    _0x5cd3c = _0x16032e();
   while (!![]) {
     try {
-      const _0x1bc447 =
-        (parseInt(_0x8b50f4(0xaf)) / 0x1) * (-parseInt(_0x8b50f4(0xc8)) / 0x2) +
-        parseInt(_0x8b50f4(0xd4)) / 0x3 +
-        (parseInt(_0x8b50f4(0xb7)) / 0x4) * (parseInt(_0x8b50f4(0xb2)) / 0x5) +
-        (-parseInt(_0x8b50f4(0xb6)) / 0x6) *
-          (-parseInt(_0x8b50f4(0xbf)) / 0x7) +
-        parseInt(_0x8b50f4(0xab)) / 0x8 +
-        (parseInt(_0x8b50f4(0xc0)) / 0x9) * (parseInt(_0x8b50f4(0xbd)) / 0xa) +
-        (parseInt(_0x8b50f4(0xc2)) / 0xb) * (-parseInt(_0x8b50f4(0xb9)) / 0xc);
-      if (_0x1bc447 === _0x386de3) break;
-      else _0x221d6a["push"](_0x221d6a["shift"]());
-    } catch (_0x58fbb8) {
-      _0x221d6a["push"](_0x221d6a["shift"]());
+      const _0x364fe0 =
+        parseInt(_0x1d4137(0xe0)) / 0x1 +
+        -parseInt(_0x1d4137(0xf1)) / 0x2 +
+        parseInt(_0x1d4137(0xe2)) / 0x3 +
+        (parseInt(_0x1d4137(0xde)) / 0x4) * (parseInt(_0x1d4137(0xdf)) / 0x5) +
+        (parseInt(_0x1d4137(0xf3)) / 0x6) * (parseInt(_0x1d4137(0xd9)) / 0x7) +
+        (parseInt(_0x1d4137(0xd6)) / 0x8) * (parseInt(_0x1d4137(0xd7)) / 0x9) +
+        (parseInt(_0x1d4137(0xfc)) / 0xa) * (-parseInt(_0x1d4137(0x102)) / 0xb);
+      if (_0x364fe0 === _0xa87ede) break;
+      else _0x5cd3c["push"](_0x5cd3c["shift"]());
+    } catch (_0x13c7c2) {
+      _0x5cd3c["push"](_0x5cd3c["shift"]());
     }
   }
-})(_0x3cf4, 0x8874e);
+})(_0x7c2c, 0x4caee);
+function _0x7c2c() {
+  const _0x1dbce8 = [
+    "unreadCount",
+    "400rpzizk",
+    "56223SlgJhS",
+    "extendedTextMessage",
+    "29407DUMnrM",
+    "low",
+    "hasOwnProperty",
+    "updatePresence",
+    "key",
+    "4HqfBJa",
+    "790820xBhMCm",
+    "488557ZMpAHN",
+    "image",
+    "1789350oplcpg",
+    "sendAudioAsVoice",
+    "mp4Audio",
+    "audio",
+    "sendVideo",
+    "timestamp",
+    "object",
+    "sendMessage",
+    "jid",
+    "sendUnread",
+    "contextInfo",
+    "unread",
+    "./ReplyMessage",
+    "message",
+    "./Base",
+    "517814GCTfWr",
+    "data",
+    "282KSURRf",
+    "mpeg",
+    "sendRecording",
+    "messageTimestamp",
+    "sendAudio",
+    "unavailable",
+    "available",
+    "mention",
+    "composing",
+    "11799670UmuDvM",
+    "text",
+    "client",
+    "sendTyping",
+    "sendOffline",
+    "chatRead",
+    "11yGbdaj",
+    "exports",
+    "sendRead",
+    "_patch",
+    "recording",
+    "remoteJid",
+    "png",
+    "gif",
+    "reply_message",
+    "sendReply",
+    "mentionedJid",
+    "fromMe",
+  ];
+  _0x7c2c = function () {
+    return _0x1dbce8;
+  };
+  return _0x7c2c();
+}
 const {
     MessageType,
+    Mimetype,
     Presence,
     MessageOptions,
   } = require("@adiwajshing/baileys"),
-  Base = require(_0x21f29a(0xc9)),
-  ReplyMessage = require(_0x21f29a(0xc1));
-function _0x363c(_0x12f052, _0x488854) {
-  const _0x3cf4fc = _0x3cf4();
-  return (
-    (_0x363c = function (_0x363c03, _0x57a082) {
-      _0x363c03 = _0x363c03 - 0xa9;
-      let _0x3e21af = _0x3cf4fc[_0x363c03];
-      return _0x3e21af;
-    }),
-    _0x363c(_0x12f052, _0x488854)
-  );
-}
+  Base = require(_0x47e739(0xf0)),
+  ReplyMessage = require(_0x47e739(0xee));
 class Message extends Base {
-  constructor(_0x44f69d, _0x2d96b8) {
-    super(_0x44f69d);
-    if (_0x2d96b8) this["_patch"](_0x2d96b8);
+  constructor(_0x2b4702, _0x3ddfa4) {
+    const _0x2cb575 = _0x47e739;
+    super(_0x2b4702);
+    if (_0x3ddfa4) this[_0x2cb575(0x105)](_0x3ddfa4);
   }
-  [_0x21f29a(0xd9)](_0x4571c5) {
-    const _0x22f01a = _0x21f29a;
+  ["_patch"](_0x180053) {
+    const _0x39958e = _0x47e739;
     return (
       (this["id"] =
-        _0x4571c5["key"]["id"] === undefined
+        _0x180053["key"]["id"] === undefined
           ? undefined
-          : _0x4571c5[_0x22f01a(0xac)]["id"]),
-      (this["jid"] = _0x4571c5["key"][_0x22f01a(0xd0)]),
-      (this[_0x22f01a(0xcb)] = _0x4571c5[_0x22f01a(0xac)]["fromMe"]),
+          : _0x180053[_0x39958e(0xdd)]["id"]),
+      (this[_0x39958e(0xea)] = _0x180053[_0x39958e(0xdd)][_0x39958e(0x107)]),
+      (this[_0x39958e(0x10d)] = _0x180053[_0x39958e(0xdd)]["fromMe"]),
       (this["message"] =
-        _0x4571c5[_0x22f01a(0xb0)]["extendedTextMessage"] === null
-          ? _0x4571c5["message"][_0x22f01a(0xd7)]
-          : _0x4571c5[_0x22f01a(0xb0)][_0x22f01a(0xca)][_0x22f01a(0xb3)]),
-      (this["unreadCount"] = _0x4571c5[_0x22f01a(0xb5)]),
-      (this["timestamp"] =
-        typeof _0x4571c5[_0x22f01a(0xb4)] === _0x22f01a(0xd3)
-          ? _0x4571c5["messageTimestamp"][_0x22f01a(0xce)]
-          : _0x4571c5[_0x22f01a(0xb4)]),
-      (this[_0x22f01a(0xba)] = _0x4571c5),
-      _0x4571c5[_0x22f01a(0xb0)][_0x22f01a(0xc5)](_0x22f01a(0xca)) &&
-      _0x4571c5[_0x22f01a(0xb0)][_0x22f01a(0xca)][_0x22f01a(0xc5)](
-        _0x22f01a(0xb8)
+        _0x180053[_0x39958e(0xef)][_0x39958e(0xd8)] === null
+          ? _0x180053[_0x39958e(0xef)]["conversation"]
+          : _0x180053[_0x39958e(0xef)]["extendedTextMessage"][_0x39958e(0xfd)]),
+      (this[_0x39958e(0x10e)] = _0x180053[_0x39958e(0x10e)]),
+      (this[_0x39958e(0xe7)] =
+        typeof _0x180053["messageTimestamp"] === _0x39958e(0xe8)
+          ? _0x180053[_0x39958e(0xf6)][_0x39958e(0xda)]
+          : _0x180053["messageTimestamp"]),
+      (this[_0x39958e(0xf2)] = _0x180053),
+      _0x180053[_0x39958e(0xef)]["hasOwnProperty"](_0x39958e(0xd8)) &&
+      _0x180053[_0x39958e(0xef)][_0x39958e(0xd8)][_0x39958e(0xdb)](
+        _0x39958e(0xec)
       ) === !![] &&
-      _0x4571c5["message"][_0x22f01a(0xca)]["contextInfo"][_0x22f01a(0xc5)](
-        _0x22f01a(0xcc)
-      )
-        ? (this[_0x22f01a(0xd2)] = new ReplyMessage(
-            this["client"],
-            _0x4571c5[_0x22f01a(0xb0)][_0x22f01a(0xca)][_0x22f01a(0xb8)]
+      _0x180053[_0x39958e(0xef)][_0x39958e(0xd8)][_0x39958e(0xec)][
+        _0x39958e(0xdb)
+      ]("quotedMessage")
+        ? (this[_0x39958e(0x10a)] = new ReplyMessage(
+            this[_0x39958e(0xfe)],
+            _0x180053["message"]["extendedTextMessage"][_0x39958e(0xec)]
           ))
-        : (this[_0x22f01a(0xd2)] = ![]),
-      _0x4571c5[_0x22f01a(0xb0)]["hasOwnProperty"]("extendedTextMessage") &&
-      _0x4571c5["message"][_0x22f01a(0xca)][_0x22f01a(0xc5)]("contextInfo") ===
-        !![] &&
-      _0x4571c5[_0x22f01a(0xb0)][_0x22f01a(0xca)][_0x22f01a(0xb8)][
-        "hasOwnProperty"
-      ](_0x22f01a(0xd8))
-        ? (this["mention"] =
-            _0x4571c5[_0x22f01a(0xb0)][_0x22f01a(0xca)]["contextInfo"][
-              _0x22f01a(0xd8)
+        : (this[_0x39958e(0x10a)] = ![]),
+      _0x180053[_0x39958e(0xef)][_0x39958e(0xdb)](_0x39958e(0xd8)) &&
+      _0x180053[_0x39958e(0xef)]["extendedTextMessage"]["hasOwnProperty"](
+        "contextInfo"
+      ) === !![] &&
+      _0x180053[_0x39958e(0xef)]["extendedTextMessage"][_0x39958e(0xec)][
+        _0x39958e(0xdb)
+      ]("mentionedJid")
+        ? (this[_0x39958e(0xfa)] =
+            _0x180053["message"][_0x39958e(0xd8)][_0x39958e(0xec)][
+              _0x39958e(0x10c)
             ])
-        : (this[_0x22f01a(0xbb)] = ![]),
-      super[_0x22f01a(0xd9)](_0x4571c5)
+        : (this[_0x39958e(0xfa)] = ![]),
+      super[_0x39958e(0x105)](_0x180053)
     );
   }
-  async [_0x21f29a(0xd1)]() {
-    const _0x545d9a = _0x21f29a;
-    return await this[_0x545d9a(0xb1)]["deleteMessage"](this["jid"], {
-      id: this["id"],
-      remoteJid: this[_0x545d9a(0xc3)],
-      fromMe: !![],
-    });
-  }
-  async [_0x21f29a(0xcf)](_0x339afb) {
-    const _0x40a192 = _0x21f29a;
-    var _0x4b8eb8 = await this[_0x40a192(0xb1)][_0x40a192(0xbc)](
-      this[_0x40a192(0xc3)],
-      _0x339afb,
-      MessageType[_0x40a192(0xb3)],
+  async [_0x47e739(0x10b)](_0x445825) {
+    const _0x181dcf = _0x47e739;
+    var _0x3f85b6 = await this["client"][_0x181dcf(0xe9)](
+      this[_0x181dcf(0xea)],
+      _0x445825,
+      MessageType["text"],
       {
         contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
-        quoted: this[_0x40a192(0xba)],
+        quoted: this[_0x181dcf(0xf2)],
       }
     );
-    return new Message(this[_0x40a192(0xb1)], _0x4b8eb8);
+    return new Message(this["client"], _0x3f85b6);
   }
-  async [_0x21f29a(0xbc)](_0x17164b, _0x1f47c1, _0x1849ac) {
-    const _0x15a9a6 = _0x21f29a;
-    return await this[_0x15a9a6(0xb1)][_0x15a9a6(0xbc)](
-      this[_0x15a9a6(0xc3)],
-      _0x17164b,
-      _0x1f47c1,
-      _0x1849ac
+  async [_0x47e739(0xe9)](_0x38ff91, _0x5eeb93, _0x171ba6) {
+    const _0xea45ff = _0x47e739;
+    return await this[_0xea45ff(0xfe)][_0xea45ff(0xe9)](
+      this[_0xea45ff(0xea)],
+      _0x38ff91,
+      _0x5eeb93,
+      _0x171ba6
     );
   }
-  async [_0x21f29a(0xcd)]() {
-    const _0x3ac45d = _0x21f29a;
-    return await this["client"][_0x3ac45d(0xa9)](this["jid"], _0x3ac45d(0xaa));
-  }
-  async ["sendTyping"]() {
-    const _0x572171 = _0x21f29a;
-    return await this["client"][_0x572171(0xad)](
-      this[_0x572171(0xc3)],
-      Presence[_0x572171(0xae)]
-    );
-  }
-  async [_0x21f29a(0xc4)]() {
-    const _0x40cedd = _0x21f29a;
-    return await this[_0x40cedd(0xb1)]["updatePresence"](
+  async ["sendImage"](_0x8c3189) {
+    const _0x140e3e = _0x47e739;
+    return await this["client"]["sendMessage"](
       this["jid"],
-      Presence["recording"]
+      _0x8c3189,
+      MessageType[_0x140e3e(0xe1)],
+      {
+        mimetype: Mimetype[_0x140e3e(0x108)],
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        quoted: this[_0x140e3e(0xf2)],
+      }
     );
   }
-  async [_0x21f29a(0xd6)]() {
-    const _0x47f249 = _0x21f29a;
-    return await this[_0x47f249(0xb1)]["updatePresence"](
-      this[_0x47f249(0xc3)],
-      Presence[_0x47f249(0xc7)]
+  async [_0x47e739(0xe6)](_0x24667e) {
+    const _0x14623d = _0x47e739;
+    return await this[_0x14623d(0xfe)]["sendMessage"](
+      this[_0x14623d(0xea)],
+      _0x24667e,
+      MessageType["video"],
+      {
+        mimetype: Mimetype[_0x14623d(0xf4)],
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        quoted: this[_0x14623d(0xf2)],
+      }
     );
   }
-  async ["sendOffline"]() {
-    const _0x2aa1bf = _0x21f29a;
-    return await this[_0x2aa1bf(0xb1)]["updatePresence"](
+  async ["sendVideoAsGif"](_0x10751d) {
+    const _0x59defa = _0x47e739;
+    return await this[_0x59defa(0xfe)]["sendMessage"](
+      this[_0x59defa(0xea)],
+      _0x10751d,
+      MessageType["video"],
+      {
+        mimetype: Mimetype[_0x59defa(0x109)],
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        quoted: this[_0x59defa(0xf2)],
+      }
+    );
+  }
+  async [_0x47e739(0xf7)](_0x2df869) {
+    const _0x43abe2 = _0x47e739;
+    return await this[_0x43abe2(0xfe)][_0x43abe2(0xe9)](
+      this[_0x43abe2(0xea)],
+      _0x2df869,
+      MessageType[_0x43abe2(0xe5)],
+      {
+        mimetype: Mimetype[_0x43abe2(0xe4)],
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        quoted: this[_0x43abe2(0xf2)],
+      }
+    );
+  }
+  async [_0x47e739(0xe3)](_0xe0b953) {
+    const _0x1e0123 = _0x47e739;
+    return await this[_0x1e0123(0xfe)][_0x1e0123(0xe9)](
+      this[_0x1e0123(0xea)],
+      _0xe0b953,
+      MessageType[_0x1e0123(0xe5)],
+      {
+        mimetype: Mimetype[_0x1e0123(0xe4)],
+        ptt: !![],
+        quoted: this[_0x1e0123(0xf2)],
+      }
+    );
+  }
+  async [_0x47e739(0xeb)]() {
+    const _0x5093b3 = _0x47e739;
+    return await this[_0x5093b3(0xfe)][_0x5093b3(0x101)](
       this["jid"],
-      Presence[_0x2aa1bf(0xd5)]
+      _0x5093b3(0xed)
     );
   }
-  async [_0x21f29a(0xbe)]() {
-    const _0x172b0b = _0x21f29a;
-    return await this["client"][_0x172b0b(0xa9)](this[_0x172b0b(0xc3)]);
+  async [_0x47e739(0xff)]() {
+    const _0x4809ec = _0x47e739;
+    return await this[_0x4809ec(0xfe)][_0x4809ec(0xdc)](
+      this[_0x4809ec(0xea)],
+      Presence[_0x4809ec(0xfb)]
+    );
+  }
+  async [_0x47e739(0xf5)]() {
+    const _0x4fb412 = _0x47e739;
+    return await this[_0x4fb412(0xfe)][_0x4fb412(0xdc)](
+      this[_0x4fb412(0xea)],
+      Presence[_0x4fb412(0x106)]
+    );
+  }
+  async ["sendOnline"]() {
+    const _0x4c2587 = _0x47e739;
+    return await this["client"][_0x4c2587(0xdc)](
+      this[_0x4c2587(0xea)],
+      Presence[_0x4c2587(0xf9)]
+    );
+  }
+  async [_0x47e739(0x100)]() {
+    const _0x5ca49b = _0x47e739;
+    return await this[_0x5ca49b(0xfe)][_0x5ca49b(0xdc)](
+      this["jid"],
+      Presence[_0x5ca49b(0xf8)]
+    );
+  }
+  async [_0x47e739(0x104)]() {
+    const _0x3b82d6 = _0x47e739;
+    return await this[_0x3b82d6(0xfe)][_0x3b82d6(0x101)](this[_0x3b82d6(0xea)]);
   }
 }
-module[_0x21f29a(0xc6)] = Message;
-function _0x3cf4() {
-  const _0x2c2dac = [
-    "jid",
-    "sendRecording",
-    "hasOwnProperty",
-    "exports",
-    "available",
-    "8QmiAgi",
-    "./Base",
-    "extendedTextMessage",
-    "fromMe",
-    "quotedMessage",
-    "sendUnread",
-    "low",
-    "sendReply",
-    "remoteJid",
-    "delete",
-    "reply_message",
-    "object",
-    "374829TjrKDy",
-    "unavailable",
-    "sendOnline",
-    "conversation",
-    "mentionedJid",
-    "_patch",
-    "chatRead",
-    "unread",
-    "3442312qSWhrl",
-    "key",
-    "updatePresence",
-    "composing",
-    "117841uLECEp",
-    "message",
-    "client",
-    "648775sfjToV",
-    "text",
-    "messageTimestamp",
-    "unreadCount",
-    "9078zkGBgc",
-    "4nFmPzs",
-    "contextInfo",
-    "12ceyutl",
-    "data",
-    "mention",
-    "sendMessage",
-    "7835270TVbBhT",
-    "sendRead",
-    "217vjdyCG",
-    "9PEBazW",
-    "./ReplyMessage",
-    "5336397iudsvH",
-  ];
-  _0x3cf4 = function () {
-    return _0x2c2dac;
-  };
-  return _0x3cf4();
-}
+module[_0x47e739(0x103)] = Message;
