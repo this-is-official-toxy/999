@@ -15,7 +15,7 @@ module.exports = {
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
     FULLALEXA: process.env.FULL_ALEXA === undefined ? 'false' : process.env.FULL_ALEXA,
     OWNER: process.env.OWNER_NAME === undefined ? 'TOXIC DEVIL' : process.env.OWNER_NAME,
-    OWNERNUM: process.env.OWNER_NUMBER === undefined ? '94768826133' : process.env.OWNER_NUMBER,
+    OWNERNUM: process.env.OWNER_NUMBER === undefined ? '2349053311892' : process.env.OWNER_NUMBER,
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     SESSION: process.env.ALEXA_SESSION === undefined ? '' : process.env.ALEXA_SESSION,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
