@@ -15,9 +15,7 @@ WhatsAlexa.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
-        await message.client.sendMessage(
-            message.jid,
-            Lang.UPDATE, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        await message.sendReply(Lang.UPDATE);
     } else {
         var degisiklikler = Lang.NEW_UPDATE;
         commits['all'].map(
@@ -26,9 +24,7 @@ WhatsAlexa.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC
             }
         );
         
-        await message.client.sendMessage(
-            message.jid,
-            degisiklikler + '```', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        await message.sendReply('```' + degisiklikler + '```');
     }
 }));
 
@@ -36,17 +32,16 @@ WhatsAlexa.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_N
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
-        return await message.client.sendMessage(
-            message.jid,
-            Lang.UPDATE, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        return await message.sendReply(Lang.UPDATE);
     } else {
-        var guncelleme = await message.client.sendMessage(message.jid, Lang.UPDATING, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        var guncelleme = await message.sendReply(Lang.UPDATING);
         if (Config.HEROKU.HEROKU) {
             try {
                 var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
             } catch {
-                return await message.client.sendMessage(
-                    message.jid,Lang.INVALID_HEROKU, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+                return await message.sendReply(
+                    Lang.INVALID_HEROKU
+                   );
             }
 
             git.fetch('upstream', Config.BRANCH);
@@ -61,20 +56,16 @@ WhatsAlexa.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_N
             } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
 
-            await message.client.sendMessage(
-                message.jid,Lang.UPDATED, MessageType.text);
-
-            await message.sendMessage(Lang.AFTER_UPDATE);
+            await message.sendReply(Lang.UPDATED);
+            await message.sendReply(Lang.AFTER_UPDATE);
             
         } else {
             git.pull((async (err, update) => {
                 if(update && update.summary.changes) {
-                    await message.client.sendMessage(
-                        message.jid,Lang.UPDATED_LOCAL, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+                    await message.sendReply(Lang.UPDATED_LOCAL);
                     exec('npm install').stderr.pipe(process.stderr);
                 } else if (err) {
-                    await message.client.sendMessage(
-                        message.jid,'*❌ An Heroku Error Occurred*\n*ERROR:* ```' + err + '```', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+                    await message.sendReply('*❌ An Heroku Error Occurred*\n*ERROR:* ```' + err + '```');
                }
             }));
             await guncelleme.delete();
