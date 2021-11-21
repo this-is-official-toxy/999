@@ -18,19 +18,19 @@ if (match[0] === 'handler') {
 
     if (match[1].includes(',')) match[1].replace(',', '')
 
-    if (match[1] !== 'multi') {
-         await heroku.patch(baseURI + '/config-vars', { 
-             body: { 
-                  ['HANDLERS']: '^[' + match[1] + ']'
-             } 
-         });
-         await message.sendReply('*✅️ Successfully Changed Prefix to ' match[1] + '*');
-    } else if (match[1] === 'default') {
+    if (match[1] === 'default') {
          await heroku.patch(baseURI + '/config-vars', { 
              body: { 
                   ['HANDLERS']: '^[!.#*]'
              } 
          });
          await message.sendReply('*✅️ Successfully Changed Prefix to !.#**');
+    } else {
+         await heroku.patch(baseURI + '/config-vars', { 
+             body: { 
+                  ['HANDLERS']: '^[' + match[1] + ']'
+             } 
+         });
+         await message.sendReply('*✅️ Successfully Changed Prefix to ' match[1] + '*');
     }
 }));
