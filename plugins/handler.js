@@ -2,7 +2,7 @@ let {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = requ
 let WhatsAlexa = require('../events');
 let fs = require('fs');
 let Config = require('../config');
-var pf = 
+var pf = ''
 
 WhatsAlexa.addCommand({pattern: `${pf} ?(.*)`, fromMe: true, desc: Lang.CLR_DESC}, (async (message, match) => {
 
