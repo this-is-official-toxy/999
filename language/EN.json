@@ -203,7 +203,7 @@
         "tagall": {
             "TAGALL_DESC": "Tags everyone in the group.",
             "TAGADMİN": "Tags group admins.",
-            "ADMİN": "*I am not admin in this group!*",
+            "ADMİN": "*You are not an admin in this group!*",
             "SCAN": "Check if the given number is registered in WhatsApp.",
             "NO": "*You must enter a Phone number!*\n*Example:* ```#scan 9199xxxx```",
             "SUC": "*The numbered person is using WhatsApp! ✅*",
