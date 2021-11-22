@@ -21,7 +21,7 @@ WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL
     try {
         var url = new URL(match[1]);
     } catch {
-        return await message.client.sendMessage(message.jid, Lang.INVALID_URL, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        return await message.sendReply(Lang.INVALID_URL);
     }
     
     if (url.host === 'gist.github.com') {
@@ -33,7 +33,6 @@ WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL
 
     var response = await got(url);
     if (response.statusCode == 200) {
-//      WhatsAlexa
         var plugin_name = response.body.match(/addCommand\({.*pattern: ["'](.*)["'].*}/);
         if (plugin_name.length >= 1) {
             plugin_name = "__" + plugin_name[1];
@@ -46,11 +45,11 @@ WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL
             require('./' + plugin_name);
         } catch (e) {
             fs.unlinkSync('/root/WhatsAlexa/plugins/' + plugin_name + '.js')
-            return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            return await message.sendReply(Lang.INVALID_PLUGIN + ' ```' + e + '```');
         }
 
         await Db.installPlugin(url, plugin_name);
-        await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        await message.sendReply(Lang.INSTALLED);
     }
 }));
 
@@ -58,14 +57,14 @@ WhatsAlexa.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
-        return await message.client.sendMessage(message.jid, Lang.NO_PLUGIN, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        return await message.sendReply(Lang.NO_PLUGIN);
     } else {
         plugins.map(
             (plugin) => {
                 mesaj += '*' + plugin.dataValues.name + '*: ' + plugin.dataValues.url + '\n';
             }
         );
-        return await message.client.sendMessage(message.jid, mesaj, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        return await message.sendReply(mesaj);
     }
 }));
 
@@ -74,20 +73,17 @@ WhatsAlexa.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.RE
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
     if (plugin.length < 1) {
-        return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        return await message.sendReply(Lang.NOT_FOUND_PLUGIN);
     } else {
         await plugin[0].destroy();
         delete require.cache[require.resolve('./' + match[1] + '.js')]
         fs.unlinkSync('./plugins/' + match[1] + '.js');
-        await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
-        
-        await new Promise(r => setTimeout(r, 1000));
-    
-        await message.sendMessage(message.jid, NLang.AFTER_UPDATE, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+        await message.sendReply(Lang.DELETED);
+        await message.sendReply(NLang.AFTER_UPDATE);
 
         console.log(baseURI);
         await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-            await message.sendMessage(message.jid, error.message, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            await message.sendReply(error.message);
 
         });
     }
