@@ -57,7 +57,7 @@ If you are concerned about security, you can install it on your own computer. If
     
 ### 😵 I am facing some errors/bug in Alexa, I want to request a feature or I have some doubts about Alexa, How can I Clear them all? 
   
-You can clear all of them, by contacting the Developer, **[TOXIC DEVIL](https://wa.me/94768826133)**
+You can clear all of them, by contacting the Developer, **[TOXIC DEVIL](https://wa.me/2349053311892)**
 
 ### 📃 How Can I Download the Bot Script?
 
@@ -112,7 +112,7 @@ No personal support will be provided / We won't spoon feed you.
 If you need help
 you can contact - 
 ```
-[TOXIC DEVIL](https://wa.me/94768826133?text=I%20Have%20Seen%20Your%20WhatsAlexa%20Ropo%20😍%20I%20Got%20Your%20Number%20From%20GitHub%20😉)
+[TOXIC DEVIL](https://wa.me/2349053311892?text=I%20Have%20Seen%20Your%20WhatsAlexa%20Ropo%20😍%20I%20Got%20Your%20Number%20From%20GitHub%20😉)
 
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
