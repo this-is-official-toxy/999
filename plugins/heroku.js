@@ -96,6 +96,8 @@ if (Config.WORKTYPE == 'private') {
     WhatsAlexa.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
+            // have encountered some issues while calling this API via heroku-client
+            // so let's do it manually
             url = "https://api.heroku.com/accounts/" + account.id + "/actions/get-quota"
             headers = {
                 "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
@@ -108,16 +110,16 @@ if (Config.WORKTYPE == 'private') {
                quota_used = Math.floor(resp.quota_used);         
                percentage = Math.round((quota_used / total_quota) * 100);
                remaining = total_quota - quota_used;
-               await message.sendReply(
+               await message.client.sendMessage(
                     message.jid,
                     Lang.DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota))  + 
                     Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +  
                     Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
                     Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
-                    );
+                    MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data
                })
             }).catch(async (err) => {
-                await message.sendReply(err.message);
+                await message.client.sendMessage(message.jid,err.message, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
             });        
         });
     }));
@@ -127,6 +129,8 @@ else if (Config.WORKTYPE == 'public') {
     WhatsAlexa.addCommand({pattern: 'dyno', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
+            // have encountered some issues while calling this API via heroku-client
+            // so let's do it manually
             url = "https://api.heroku.com/accounts/" + account.id + "/actions/get-quota"
             headers = {
                 "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
@@ -139,16 +143,16 @@ else if (Config.WORKTYPE == 'public') {
                quota_used = Math.floor(resp.quota_used);         
                percentage = Math.round((quota_used / total_quota) * 100);
                remaining = total_quota - quota_used;
-               await message.sendReply(
+               await message.client.sendMessage(
                     message.jid,
                     Lang.DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota))  + 
                     Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +  
                     Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
                     Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
-                    );
+                    MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data
                })
             }).catch(async (err) => {
-                await message.sendReply(err.message);
+                await message.client.sendMessage(message.jid,err.message, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
             });        
         });
     }));
