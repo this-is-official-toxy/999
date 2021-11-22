@@ -9,14 +9,14 @@ if (Config.WORKTYPE == 'private') {
   
     WhatsAlexa.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
 
-        if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
-      
+        if (match[1] == '') return await message.sendReply(Lang.NO);
+
         var exists = await message.client.isOnWhatsApp(match[1])
         if (exists) {
-            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            await message.sendReply('```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid);
         }
         else {
-            await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            await message.sendReply('```' + match[1] + '``` \n' + Lang.UNSUC);
         }
     }));
 }
@@ -24,14 +24,14 @@ else if (Config.WORKTYPE == 'public') {
   
     WhatsAlexa.addCommand({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
 
-        if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
-      
+        if (match[1] == '') return await message.sendReply(Lang.NO);
+
         var exists = await message.client.isOnWhatsApp(match[1])
         if (exists) {
-            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            await message.sendReply('```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid);
         }
         else {
-            await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            await message.sendReply('```' + match[1] + '``` \n' + Lang.UNSUC);
         }
     }));
 }
