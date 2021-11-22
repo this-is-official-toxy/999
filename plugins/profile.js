@@ -7,14 +7,14 @@ let Lang = Language.getString('profile');
 
 WhatsAlexa.addCommand({pattern: 'leave', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
 
-        await message.client.sendMessage(message.jid,Lang.KICKME,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
-        await message.client.groupLeave(message.jid);
+    await message.sendReply(Lang.KICKME);
+    await message.client.groupLeave(message.jid);
 }));
 
 WhatsAlexa.addCommand({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
-    if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
-    
-    var load = await message.client.sendMessage(message.jid,Lang.PPING,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+    if (message.reply_message === false || message.reply_message.image === false) return await message.sendReply(Lang.NEED_PHOTO);
+
+    var load = await message.sendReply(Lang.PPING);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,
