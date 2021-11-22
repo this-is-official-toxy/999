@@ -1,301 +1,331 @@
-const _0x230e55 = _0x45d3;
-(function (_0xe5490d, _0x1e22d3) {
-  const _0x34e292 = _0x45d3,
-    _0x21076d = _0xe5490d();
+const _0x25c92a = _0x4a94;
+(function (_0x18a441, _0xc2a75a) {
+  const _0x12689a = _0x4a94,
+    _0x499eda = _0x18a441();
   while (!![]) {
     try {
-      const _0x49eba4 =
-        -parseInt(_0x34e292(0x160)) / 0x1 +
-        -parseInt(_0x34e292(0x154)) / 0x2 +
-        parseInt(_0x34e292(0x17c)) / 0x3 +
-        -parseInt(_0x34e292(0x17d)) / 0x4 +
-        parseInt(_0x34e292(0x168)) / 0x5 +
-        parseInt(_0x34e292(0x187)) / 0x6 +
-        parseInt(_0x34e292(0x16e)) / 0x7;
-      if (_0x49eba4 === _0x1e22d3) break;
-      else _0x21076d["push"](_0x21076d["shift"]());
-    } catch (_0x2f4fd5) {
-      _0x21076d["push"](_0x21076d["shift"]());
+      const _0x4af956 =
+        (-parseInt(_0x12689a(0x9c)) / 0x1) *
+          (-parseInt(_0x12689a(0xbf)) / 0x2) +
+        -parseInt(_0x12689a(0x93)) / 0x3 +
+        -parseInt(_0x12689a(0xa1)) / 0x4 +
+        -parseInt(_0x12689a(0x9e)) / 0x5 +
+        (parseInt(_0x12689a(0xa4)) / 0x6) * (-parseInt(_0x12689a(0xb3)) / 0x7) +
+        (-parseInt(_0x12689a(0xa8)) / 0x8) * (parseInt(_0x12689a(0xb5)) / 0x9) +
+        parseInt(_0x12689a(0xba)) / 0xa;
+      if (_0x4af956 === _0xc2a75a) break;
+      else _0x499eda["push"](_0x499eda["shift"]());
+    } catch (_0xec7d9b) {
+      _0x499eda["push"](_0x499eda["shift"]());
     }
   }
-})(_0x640c, 0x2e8d2);
-const { MessageType, Mimetype, Presence, MessageOptions } = require(_0x230e55(
-    0x183
-  )),
-  Base = require(_0x230e55(0x14f)),
-  Message = require(_0x230e55(0x188)),
-  ReplyMessage = require(_0x230e55(0x151));
+})(_0x1243, 0xea89e);
+const {
+    MessageType,
+    Mimetype,
+    Presence,
+    MessageOptions,
+  } = require("@adiwajshing/baileys"),
+  Base = require(_0x25c92a(0x88)),
+  Message = require(_0x25c92a(0x8d)),
+  ReplyMessage = require(_0x25c92a(0xb0));
+function _0x4a94(_0x317453, _0x1127ba) {
+  const _0x124317 = _0x1243();
+  return (
+    (_0x4a94 = function (_0x4a9434, _0x2e7afb) {
+      _0x4a9434 = _0x4a9434 - 0x84;
+      let _0x4060b3 = _0x124317[_0x4a9434];
+      return _0x4060b3;
+    }),
+    _0x4a94(_0x317453, _0x1127ba)
+  );
+}
 class Image extends Base {
-  constructor(_0x42ef02, _0x3729a2) {
-    const _0x4c4a87 = _0x230e55;
-    super(_0x42ef02);
-    if (_0x3729a2) this[_0x4c4a87(0x161)](_0x3729a2);
+  constructor(_0x383fe5, _0x1eb0f0) {
+    const _0x2580c8 = _0x25c92a;
+    super(_0x383fe5);
+    if (_0x1eb0f0) this[_0x2580c8(0x9f)](_0x1eb0f0);
   }
-  [_0x230e55(0x161)](_0xdb5be9) {
-    const _0x166594 = _0x230e55;
+  [_0x25c92a(0x9f)](_0x2c15fd) {
+    const _0x192a64 = _0x25c92a;
     return (
       (this["id"] =
-        _0xdb5be9["key"]["id"] === undefined
+        _0x2c15fd["key"]["id"] === undefined
           ? undefined
-          : _0xdb5be9["key"]["id"]),
-      (this["jid"] = _0xdb5be9[_0x166594(0x180)][_0x166594(0x155)]),
-      (this["fromMe"] = _0xdb5be9["key"]["fromMe"]),
-      (this[_0x166594(0x182)] =
-        _0xdb5be9[_0x166594(0x173)][_0x166594(0x156)]["caption"] === null
-          ? _0xdb5be9[_0x166594(0x173)][_0x166594(0x156)][_0x166594(0x182)]
+          : _0x2c15fd[_0x192a64(0x86)]["id"]),
+      (this["jid"] = _0x2c15fd[_0x192a64(0x86)]["remoteJid"]),
+      (this["fromMe"] = _0x2c15fd[_0x192a64(0x86)][_0x192a64(0xb1)]),
+      (this[_0x192a64(0xbb)] =
+        _0x2c15fd["message"]["imageMessage"]["caption"] === null
+          ? _0x2c15fd[_0x192a64(0x90)][_0x192a64(0xa0)][_0x192a64(0xbb)]
           : ""),
-      (this[_0x166594(0x177)] =
-        _0xdb5be9["message"]["imageMessage"][_0x166594(0x177)]),
-      (this[_0x166594(0x14e)] =
-        typeof _0xdb5be9[_0x166594(0x178)] === "object"
-          ? _0xdb5be9[_0x166594(0x178)][_0x166594(0x162)]
-          : _0xdb5be9[_0x166594(0x178)]),
-      (this[_0x166594(0x172)] =
-        _0xdb5be9[_0x166594(0x173)][_0x166594(0x156)][_0x166594(0x172)]),
-      (this[_0x166594(0x175)] =
-        _0xdb5be9[_0x166594(0x173)][_0x166594(0x156)][_0x166594(0x175)]),
-      (this["width"] = _0xdb5be9[_0x166594(0x173)][_0x166594(0x156)]["width"]),
-      (this[_0x166594(0x16b)] =
-        _0xdb5be9[_0x166594(0x173)][_0x166594(0x156)]["mediaKey"]),
-      (this[_0x166594(0x16f)] = _0xdb5be9),
-      _0xdb5be9[_0x166594(0x173)]["imageMessage"][_0x166594(0x184)](
+      (this[_0x192a64(0x85)] =
+        _0x2c15fd["message"]["imageMessage"][_0x192a64(0x85)]),
+      (this["timestamp"] =
+        typeof _0x2c15fd[_0x192a64(0xac)] === "object"
+          ? _0x2c15fd[_0x192a64(0xac)][_0x192a64(0x87)]
+          : _0x2c15fd[_0x192a64(0xac)]),
+      (this[_0x192a64(0x84)] =
+        _0x2c15fd[_0x192a64(0x90)][_0x192a64(0xa0)][_0x192a64(0x84)]),
+      (this[_0x192a64(0x8a)] =
+        _0x2c15fd["message"][_0x192a64(0xa0)][_0x192a64(0x8a)]),
+      (this[_0x192a64(0xb2)] =
+        _0x2c15fd["message"]["imageMessage"][_0x192a64(0xb2)]),
+      (this[_0x192a64(0xa2)] =
+        _0x2c15fd[_0x192a64(0x90)]["imageMessage"]["mediaKey"]),
+      (this[_0x192a64(0xb8)] = _0x2c15fd),
+      _0x2c15fd[_0x192a64(0x90)][_0x192a64(0xa0)][_0x192a64(0xb6)](
         "contextInfo"
-      ) && _0xdb5be9[_0x166594(0x173)][_0x166594(0x189)][_0x166594(0x15b)]
-        ? (this[_0x166594(0x16c)] = new ReplyMessage(
-            this[_0x166594(0x16d)],
-            _0xdb5be9[_0x166594(0x173)]["imageMessage"][_0x166594(0x189)]
+      ) && _0x2c15fd[_0x192a64(0x90)][_0x192a64(0x89)][_0x192a64(0x94)]
+        ? (this[_0x192a64(0x97)] = new ReplyMessage(
+            this[_0x192a64(0x9d)],
+            _0x2c15fd[_0x192a64(0x90)][_0x192a64(0xa0)][_0x192a64(0x89)]
           ))
-        : (this[_0x166594(0x16c)] = ![]),
-      super[_0x166594(0x161)](_0xdb5be9)
+        : (this[_0x192a64(0x97)] = ![]),
+      super[_0x192a64(0x9f)](_0x2c15fd)
     );
   }
-  async [_0x230e55(0x170)]() {
-    const _0x154f77 = _0x230e55;
-    return await this[_0x154f77(0x16d)][_0x154f77(0x17f)](this["jid"], {
+  async [_0x25c92a(0x96)]() {
+    const _0x1f0807 = _0x25c92a;
+    return await this[_0x1f0807(0x9d)]["deleteMessage"](this[_0x1f0807(0x9a)], {
       id: this["id"],
-      remoteJid: this[_0x154f77(0x18a)],
+      remoteJid: this[_0x1f0807(0x9a)],
       fromMe: !![],
     });
   }
-  async [_0x230e55(0x15c)](_0x4e3ab9) {
-    const _0x3607ea = _0x230e55;
-    var _0x5b31d8 = await this[_0x3607ea(0x16d)][_0x3607ea(0x171)](
+  async [_0x25c92a(0xab)](_0x54a64c) {
+    const _0x3f5bd3 = _0x25c92a;
+    var _0x4f96bd = await this["client"][_0x3f5bd3(0xa6)](
       this["jid"],
-      _0x4e3ab9,
-      MessageType[_0x3607ea(0x15f)],
+      _0x54a64c,
+      MessageType[_0x3f5bd3(0xaa)],
       {
         contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
-        quoted: this[_0x3607ea(0x16f)],
+        quoted: this[_0x3f5bd3(0xb8)],
       }
     );
-    return new Message(this[_0x3607ea(0x16d)], _0x5b31d8);
+    return new Message(this[_0x3f5bd3(0x9d)], _0x4f96bd);
   }
-  async [_0x230e55(0x171)](_0x369362, _0x5d2b80, _0x39a688) {
-    const _0x48ef3f = _0x230e55;
-    return await this["client"][_0x48ef3f(0x171)](
-      this[_0x48ef3f(0x18a)],
-      _0x369362,
-      _0x5d2b80,
-      _0x39a688
+  async [_0x25c92a(0xa6)](_0x57c45f, _0x5a4118, _0x56535c) {
+    const _0x54018a = _0x25c92a;
+    return await this[_0x54018a(0x9d)]["sendMessage"](
+      this[_0x54018a(0x9a)],
+      _0x57c45f,
+      _0x5a4118,
+      _0x56535c
     );
   }
-  async [_0x230e55(0x150)](_0x34ebe0) {
-    const _0x3db9d5 = _0x230e55;
-    return await this[_0x3db9d5(0x16d)][_0x3db9d5(0x171)](
-      this[_0x3db9d5(0x18a)],
-      _0x34ebe0,
-      MessageType[_0x3db9d5(0x169)],
+  async [_0x25c92a(0xa3)](_0x50b62c, _0x38d9b6) {
+    const _0x3aca8d = _0x25c92a;
+    return await this[_0x3aca8d(0x9d)][_0x3aca8d(0xa6)](
+      this[_0x3aca8d(0x9a)],
+      _0x50b62c,
+      MessageType["image"],
       {
-        mimetype: Mimetype[_0x3db9d5(0x166)],
+        mimetype: Mimetype["png"],
         contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
-        caption: _0x3db9d5(0x179),
-        quoted: this[_0x3db9d5(0x16f)],
+        caption: _0x38d9b6,
+        quoted: this["data"],
       }
     );
   }
-  async [_0x230e55(0x176)](_0x914c0b) {
-    const _0x151106 = _0x230e55;
-    return await this[_0x151106(0x16d)][_0x151106(0x171)](
-      this[_0x151106(0x18a)],
-      _0x914c0b,
-      MessageType[_0x151106(0x18c)],
+  async ["sendImageAsViewonce"](_0x3e080b, _0x120c90) {
+    const _0x5af00c = _0x25c92a;
+    return await this[_0x5af00c(0x9d)][_0x5af00c(0xa6)](
+      this[_0x5af00c(0x9a)],
+      _0x3e080b,
+      MessageType["image"],
       {
-        mimetype: Mimetype[_0x151106(0x16a)],
-        caption: _0x151106(0x179),
+        mimetype: Mimetype[_0x5af00c(0x8b)],
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        caption: _0x120c90,
+        readViewOnce: !![],
+        quoted: this["data"],
+      }
+    );
+  }
+  async [_0x25c92a(0xb7)](_0x4d3677, _0x33dfd7) {
+    const _0xb87eb0 = _0x25c92a;
+    return await this[_0xb87eb0(0x9d)][_0xb87eb0(0xa6)](
+      this[_0xb87eb0(0x9a)],
+      _0x4d3677,
+      MessageType["video"],
+      {
+        mimetype: Mimetype["mp4"],
+        caption: _0x33dfd7,
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        quoted: this[_0xb87eb0(0xb8)],
+      }
+    );
+  }
+  async ["sendVideoAsViewonce"](_0xd238bb, _0x5e4fad) {
+    const _0x2f78ee = _0x25c92a;
+    return await this[_0x2f78ee(0x9d)]["sendMessage"](
+      this[_0x2f78ee(0x9a)],
+      _0xd238bb,
+      MessageType[_0x2f78ee(0xbd)],
+      {
+        mimetype: Mimetype[_0x2f78ee(0xbe)],
+        caption: _0x5e4fad,
+        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
+        readViewOnce: !![],
+        quoted: this[_0x2f78ee(0xb8)],
+      }
+    );
+  }
+  async ["sendVideoAsGif"](_0x4b767d, _0x3b3985) {
+    const _0x2b635f = _0x25c92a;
+    return await this[_0x2b635f(0x9d)][_0x2b635f(0xa6)](
+      this[_0x2b635f(0x9a)],
+      _0x4b767d,
+      MessageType["video"],
+      {
+        mimetype: Mimetype["gif"],
+        caption: _0x3b3985,
         contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
         quoted: this["data"],
       }
     );
   }
-  async [_0x230e55(0x15a)](_0x30ba2a) {
-    const _0x3a63a0 = _0x230e55;
-    return await this["client"][_0x3a63a0(0x171)](
-      this[_0x3a63a0(0x18a)],
-      _0x30ba2a,
-      MessageType[_0x3a63a0(0x18c)],
+  async [_0x25c92a(0x91)](_0x57a58a) {
+    const _0x48abce = _0x25c92a;
+    return await this["client"][_0x48abce(0xa6)](
+      this["jid"],
+      _0x57a58a,
+      MessageType[_0x48abce(0xa5)],
       {
-        mimetype: Mimetype[_0x3a63a0(0x17a)],
-        caption: "*Made\x20by\x20WhatsAlexa*",
+        mimetype: Mimetype["mp4Audio"],
         contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
-        quoted: this[_0x3a63a0(0x16f)],
+        quoted: this[_0x48abce(0xb8)],
       }
     );
   }
-  async [_0x230e55(0x174)](_0x47e3c3) {
-    const _0xf28cc9 = _0x230e55;
-    return await this[_0xf28cc9(0x16d)]["sendMessage"](
-      this[_0xf28cc9(0x18a)],
-      _0x47e3c3,
-      MessageType[_0xf28cc9(0x186)],
-      {
-        mimetype: Mimetype[_0xf28cc9(0x18d)],
-        contextInfo: { forwardingScore: 0x31, isForwarded: !![] },
-        quoted: this[_0xf28cc9(0x16f)],
-      }
-    );
-  }
-  async [_0x230e55(0x17e)](_0x50b336) {
-    const _0x50d762 = _0x230e55;
-    return await this[_0x50d762(0x16d)][_0x50d762(0x171)](
-      this[_0x50d762(0x18a)],
-      _0x50b336,
+  async [_0x25c92a(0xb4)](_0x3c1a69) {
+    const _0x3cc221 = _0x25c92a;
+    return await this[_0x3cc221(0x9d)][_0x3cc221(0xa6)](
+      this["jid"],
+      _0x3c1a69,
       MessageType["audio"],
       {
-        mimetype: Mimetype[_0x50d762(0x18d)],
+        mimetype: Mimetype[_0x3cc221(0x8e)],
         ptt: !![],
-        quoted: this[_0x50d762(0x16f)],
+        quoted: this[_0x3cc221(0xb8)],
       }
     );
   }
-  async [_0x230e55(0x167)]() {
-    const _0x5c9203 = _0x230e55;
-    return await this[_0x5c9203(0x16d)][_0x5c9203(0x18b)](
+  async ["sendUnread"]() {
+    const _0x5ca7e2 = _0x25c92a;
+    return await this[_0x5ca7e2(0x9d)]["chatRead"](
+      this[_0x5ca7e2(0x9a)],
+      _0x5ca7e2(0x92)
+    );
+  }
+  async [_0x25c92a(0x8c)]() {
+    const _0xca3fe3 = _0x25c92a;
+    return await this[_0xca3fe3(0x9d)][_0xca3fe3(0xa7)](
       this["jid"],
-      _0x5c9203(0x15e)
+      Presence[_0xca3fe3(0xaf)]
     );
   }
-  async [_0x230e55(0x181)]() {
-    const _0x29ae7e = _0x230e55;
-    return await this[_0x29ae7e(0x16d)][_0x29ae7e(0x165)](
-      this[_0x29ae7e(0x18a)],
-      Presence[_0x29ae7e(0x17b)]
+  async [_0x25c92a(0x95)]() {
+    const _0x5083a4 = _0x25c92a;
+    return await this[_0x5083a4(0x9d)][_0x5083a4(0xa7)](
+      this[_0x5083a4(0x9a)],
+      Presence["recording"]
     );
   }
-  async [_0x230e55(0x163)]() {
-    const _0x17cfd2 = _0x230e55;
-    return await this["client"][_0x17cfd2(0x165)](
-      this["jid"],
-      Presence[_0x17cfd2(0x158)]
+  async [_0x25c92a(0xae)]() {
+    const _0x18a195 = _0x25c92a;
+    return await this[_0x18a195(0x9d)][_0x18a195(0xa7)](
+      this[_0x18a195(0x9a)],
+      Presence["available"]
     );
   }
-  async [_0x230e55(0x14d)]() {
-    const _0x282e67 = _0x230e55;
-    return await this[_0x282e67(0x16d)][_0x282e67(0x165)](
-      this[_0x282e67(0x18a)],
-      Presence[_0x282e67(0x153)]
+  async [_0x25c92a(0x99)]() {
+    const _0x223a1d = _0x25c92a;
+    return await this["client"]["updatePresence"](
+      this[_0x223a1d(0x9a)],
+      Presence[_0x223a1d(0xb9)]
     );
   }
-  async [_0x230e55(0x157)]() {
-    const _0x3b7350 = _0x230e55;
-    return await this["client"][_0x3b7350(0x165)](
-      this[_0x3b7350(0x18a)],
-      Presence[_0x3b7350(0x152)]
-    );
+  async [_0x25c92a(0x9b)]() {
+    const _0x3354d5 = _0x25c92a;
+    return await this[_0x3354d5(0x9d)][_0x3354d5(0xad)](this[_0x3354d5(0x9a)]);
   }
-  async [_0x230e55(0x15d)]() {
-    const _0x184bbb = _0x230e55;
-    return await this[_0x184bbb(0x16d)]["chatRead"](this[_0x184bbb(0x18a)]);
-  }
-  async [_0x230e55(0x164)](_0x149227 = this["id"]) {
-    const _0x5a3c52 = _0x230e55;
+  async [_0x25c92a(0xbc)](_0x48e3d5 = this["id"]) {
+    const _0x531c0d = _0x25c92a;
     return (
-      await this["client"][_0x5a3c52(0x185)](this[_0x5a3c52(0x16f)], _0x149227),
-      this["id"] + "." + this[_0x5a3c52(0x172)]["split"]("/")[0x1]
+      await this["client"][_0x531c0d(0x98)](this[_0x531c0d(0xb8)], _0x48e3d5),
+      this["id"] + "." + this[_0x531c0d(0x84)][_0x531c0d(0xa9)]("/")[0x1]
     );
   }
 }
-function _0x45d3(_0x30c139, _0x123359) {
-  const _0x640c37 = _0x640c();
-  return (
-    (_0x45d3 = function (_0x45d389, _0x286cfb) {
-      _0x45d389 = _0x45d389 - 0x14d;
-      let _0x11a976 = _0x640c37[_0x45d389];
-      return _0x11a976;
-    }),
-    _0x45d3(_0x30c139, _0x123359)
-  );
-}
-function _0x640c() {
-  const _0x134ff6 = [
-    "sendVideo",
-    "url",
-    "messageTimestamp",
-    "*Made\x20by\x20WhatsAlexa*",
-    "gif",
-    "composing",
-    "550758SVuyzu",
-    "115888PFrazc",
-    "sendAudioAsVoice",
-    "deleteMessage",
-    "key",
-    "sendTyping",
-    "caption",
-    "@adiwajshing/baileys",
-    "hasOwnProperty",
-    "downloadAndSaveMediaMessage",
-    "audio",
-    "1158264CSStMz",
-    "./Message",
-    "contextInfo",
-    "jid",
-    "chatRead",
-    "video",
-    "mp4Audio",
-    "sendOnline",
-    "timestamp",
-    "./Base",
-    "sendImage",
-    "./ReplyMessage",
-    "unavailable",
-    "available",
-    "132690GWXVhA",
-    "remoteJid",
-    "imageMessage",
-    "sendOffline",
-    "recording",
-    "exports",
-    "sendVideoAsGif",
-    "quotedMessage",
+function _0x1243() {
+  const _0x11f0be = [
     "sendReply",
-    "sendRead",
-    "unread",
-    "text",
-    "182943rulqKV",
-    "_patch",
-    "low",
-    "sendRecording",
-    "download",
-    "updatePresence",
-    "png",
-    "sendUnread",
-    "93125fviZFG",
-    "image",
-    "mpeg",
-    "mediaKey",
-    "reply_message",
-    "client",
-    "515753FzoARk",
+    "messageTimestamp",
+    "chatRead",
+    "sendOnline",
+    "composing",
+    "./ReplyMessage",
+    "fromMe",
+    "width",
+    "7dbxNUZ",
+    "sendAudioAsVoice",
+    "4554ZeaWrC",
+    "hasOwnProperty",
+    "sendVideo",
     "data",
-    "delete",
-    "sendMessage",
+    "unavailable",
+    "30484490WBvsNf",
+    "caption",
+    "download",
+    "video",
+    "mp4",
+    "216304ZaeqLd",
     "mimetype",
+    "url",
+    "key",
+    "low",
+    "./Base",
+    "contextInfo",
+    "height",
+    "png",
+    "sendTyping",
+    "./Message",
+    "mp4Audio",
+    "exports",
     "message",
     "sendAudio",
-    "height",
+    "unread",
+    "716259XWUBjS",
+    "quotedMessage",
+    "sendRecording",
+    "delete",
+    "reply_message",
+    "downloadAndSaveMediaMessage",
+    "sendOffline",
+    "jid",
+    "sendRead",
+    "4IweLcm",
+    "client",
+    "5772345WcnlzH",
+    "_patch",
+    "imageMessage",
+    "673076CleuPk",
+    "mediaKey",
+    "sendImage",
+    "461628ZBQxkM",
+    "audio",
+    "sendMessage",
+    "updatePresence",
+    "13944alaXjk",
+    "split",
+    "text",
   ];
-  _0x640c = function () {
-    return _0x134ff6;
+  _0x1243 = function () {
+    return _0x11f0be;
   };
-  return _0x640c();
+  return _0x1243();
 }
-module[_0x230e55(0x159)] = Image;
+module[_0x25c92a(0x8f)] = Image;
