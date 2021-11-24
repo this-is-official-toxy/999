@@ -1,10 +1,10 @@
 {
   "name": "WhatsAlexa",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "WhatsAlexa is a Helper WhatsApp Bot Written with Baileys Which is hosted on Heroku Cloud Server. Also Alexa has a Lot of Commands/Features, Including Artificial Intelligence [ AI ] Features/Commands.",
   "main": "./WhatsAlexa/bot.js",
   "scripts": {
-    "start": "./WhatsAlexa/bot.js"
+    "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
