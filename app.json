@@ -26,16 +26,6 @@
             "required": true,
             "value": "false"
         },
-        "ANTI_FAKENUMBER": {
-            "description": "It makes the bot Anti fake number ( the person who joined group with fake number will be kicked by the bot, if it is an admin. )",
-            "required": true,
-            "value": "false"
-        },
-        "COUNTRY_CODE": {
-            "description": "Enter the original country code which won't be kicked when ANTI_FAKENUMBER is enabled.",
-            "required": false,
-            "value": "+91"
-        },
         "FULL_ALEXA": {
             "description": "It turns your account to Alexa AI ChatBot.",
             "required": true,
