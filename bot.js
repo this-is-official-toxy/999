@@ -348,21 +348,6 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
 
-        async function checkImAdmin(message, user = conn.user.jid) {
-            var grup = await conn.groupMetadata(message.jid);
-            var sonuc = grup['participants'].map((member) => {
-                if (member.id.split('@')[0] === user.split('@')[0] && member.isAdmin) return true; else; return false;
-            });
-            return sonuc.includes(true);
-        }
-
-          let og = config.COUNTRYCODE.replace('+', '')
-
-          if (config.ANTIFAKENUM !== 'false' && !msg.messageStubParameters[0].startsWith(og)) {
-             let admin = await checkImAdmin(conn);
-             if (!admin) return;
-             return await conn.groupRemove(msg.key.remoteJid, [msg.messageStubParameters[0]]);
-          }
              var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
                 if (gb.message.includes('{pp}')) {
