@@ -1,4 +1,18 @@
-const _0x5be5ab=_0x3f76;(function(_0x4c7b84,_0xdc512a){const _0x5a9639=_0x3f76,_0x33ec1c=_0x4c7b84();while(!![]){try{const _0x278781=-parseInt(_0x5a9639(0x1c5))/0x1+-parseInt(_0x5a9639(0x1c3))/0x2*(parseInt(_0x5a9639(0x1ba))/0x3)+parseInt(_0x5a9639(0x1ca))/0x4*(parseInt(_0x5a9639(0x1bf))/0x5)+parseInt(_0x5a9639(0x1bd))/0x6+parseInt(_0x5a9639(0x1c8))/0x7+-parseInt(_0x5a9639(0x1c2))/0x8+parseInt(_0x5a9639(0x1b9))/0x9;if(_0x278781===_0xdc512a)break;else _0x33ec1c['push'](_0x33ec1c['shift']());}catch(_0x1bebbc){_0x33ec1c['push'](_0x33ec1c['shift']());}}}(_0x2eff,0xb06d4));function _0x2eff(){const _0x3aed83=['6110048elGmBY','125266owWJXw','@adiwajshing/baileys','1245692BNuuDy','getString','./package.json','6385799dQVLqD','./events','97336IeSUho','sequelize','got','path','chalk','12241656SrOEVa','39RcyTNy','info','../language','7351272byqGEr','./alexa/','10ITuJMV','heroku-client','axios'];_0x2eff=function(){return _0x3aed83;};return _0x2eff();}function _0x3f76(_0x345f88,_0x4d84eb){const _0x2eff4c=_0x2eff();return _0x3f76=function(_0x3f76de,_0x2fa5a1){_0x3f76de=_0x3f76de-0x1b9;let _0x582b8b=_0x2eff4c[_0x3f76de];return _0x582b8b;},_0x3f76(_0x345f88,_0x4d84eb);}const fs=require('fs'),path=require(_0x5be5ab(0x1cd)),events=require(_0x5be5ab(0x1c9)),chalk=require(_0x5be5ab(0x1ce)),config=require('./config'),pkg=require(_0x5be5ab(0x1c7)),axios=require(_0x5be5ab(0x1c1)),Heroku=require(_0x5be5ab(0x1c0)),{WAConnection,MessageOptions,MessageType,Mimetype,Presence,ChatModification}=require(_0x5be5ab(0x1c4)),{Message,StringSession,Image,Video}=require(_0x5be5ab(0x1be)),{DataTypes}=require(_0x5be5ab(0x1cb)),{GreetingsDB,getMessage}=require('./plugins/sql/greetings'),got=require(_0x5be5ab(0x1cc)),Language=require(_0x5be5ab(0x1bc)),ILang=Language[_0x5be5ab(0x1c6)](_0x5be5ab(0x1bb));
+const fs = require("fs");
+const path = require("path");
+const events = require("./events");
+const chalk = require('chalk');
+const config = require('./config');
+const pkg = require('./package.json');
+const axios = require('axios');
+const Heroku = require('heroku-client');
+const {WAConnection, MessageOptions, MessageType, Mimetype, Presence, ChatModification} = require('@adiwajshing/baileys');
+const {Message, StringSession, Image, Video} = require('./alexa/');
+const { DataTypes } = require('sequelize');
+const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
+const got = require('got');
+const Language = require('../language');
+const ILang = Language.getString('info');
 
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
