@@ -391,8 +391,8 @@
             "NEED_WORD": "*You must enter words!*",
             "QRREAD_DESC": "Reads result from the replied QR Code Image.",
             "SUC_READ": "```😇 Here is What I read from your QR Code.```",
-            "ERROR_QRREAD": "```❌️ An Error Occured While Reading QR!```",
-            "NEED_IMAGE": "*You must reply to any image!*",
+            "ERROR_QRREAD": "```❌️ An Error Occurred While Reading QR!```",
+            "NEED_IMAGE": "*You must reply to an image!*",
             "ANIME_DESC": "It writes the text inside the banner the anime girl is holding",
             "TRUMP_DESC": "Converts the text to Trump's tweet.",
             "CHANGE_DESC": "Turns the text into the change my mind poster."
