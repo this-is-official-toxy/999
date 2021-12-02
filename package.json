@@ -1,6 +1,6 @@
 {
   "name": "WhatsAlexa",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "WhatsAlexa is a Helper WhatsApp Bot Written with Baileys Which is hosted on Heroku Cloud Server. Also Alexa has a Lot of Commands/Features, Including Artificial Intelligence [ AI ] Features/Commands.",
   "main": "./WhatsAlexa/bot.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "browser-id3-writer": "^4.4.0",
     "playstore-scraper": "^1.0.0",
     "qrcode-reader": "^1.0.4",
+    "captchagen": "^1.2.0",
     "axios": "0.21.1",
     "googlethis": "^1.1.6",
     "audiobuffer-to-wav": "1.0.0",
