@@ -1,16 +1,4 @@
-const fs = require("fs");
-const path = require("path");
-const events = require("./events");
-const chalk = require('chalk');
-const config = require('./config');
-const pkg = require('./package.json');
-const axios = require('axios');
-const Heroku = require('heroku-client');
-const {WAConnection, MessageOptions, MessageType, Mimetype, Presence, ChatModification} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./alexa/');
-const { DataTypes } = require('sequelize');
-const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
-const got = require('got');
+const _0x5be5ab=_0x3f76;(function(_0x4c7b84,_0xdc512a){const _0x5a9639=_0x3f76,_0x33ec1c=_0x4c7b84();while(!![]){try{const _0x278781=-parseInt(_0x5a9639(0x1c5))/0x1+-parseInt(_0x5a9639(0x1c3))/0x2*(parseInt(_0x5a9639(0x1ba))/0x3)+parseInt(_0x5a9639(0x1ca))/0x4*(parseInt(_0x5a9639(0x1bf))/0x5)+parseInt(_0x5a9639(0x1bd))/0x6+parseInt(_0x5a9639(0x1c8))/0x7+-parseInt(_0x5a9639(0x1c2))/0x8+parseInt(_0x5a9639(0x1b9))/0x9;if(_0x278781===_0xdc512a)break;else _0x33ec1c['push'](_0x33ec1c['shift']());}catch(_0x1bebbc){_0x33ec1c['push'](_0x33ec1c['shift']());}}}(_0x2eff,0xb06d4));function _0x2eff(){const _0x3aed83=['6110048elGmBY','125266owWJXw','@adiwajshing/baileys','1245692BNuuDy','getString','./package.json','6385799dQVLqD','./events','97336IeSUho','sequelize','got','path','chalk','12241656SrOEVa','39RcyTNy','info','../language','7351272byqGEr','./alexa/','10ITuJMV','heroku-client','axios'];_0x2eff=function(){return _0x3aed83;};return _0x2eff();}function _0x3f76(_0x345f88,_0x4d84eb){const _0x2eff4c=_0x2eff();return _0x3f76=function(_0x3f76de,_0x2fa5a1){_0x3f76de=_0x3f76de-0x1b9;let _0x582b8b=_0x2eff4c[_0x3f76de];return _0x582b8b;},_0x3f76(_0x345f88,_0x4d84eb);}const fs=require('fs'),path=require(_0x5be5ab(0x1cd)),events=require(_0x5be5ab(0x1c9)),chalk=require(_0x5be5ab(0x1ce)),config=require('./config'),pkg=require(_0x5be5ab(0x1c7)),axios=require(_0x5be5ab(0x1c1)),Heroku=require(_0x5be5ab(0x1c0)),{WAConnection,MessageOptions,MessageType,Mimetype,Presence,ChatModification}=require(_0x5be5ab(0x1c4)),{Message,StringSession,Image,Video}=require(_0x5be5ab(0x1be)),{DataTypes}=require(_0x5be5ab(0x1cb)),{GreetingsDB,getMessage}=require('./plugins/sql/greetings'),got=require(_0x5be5ab(0x1cc)),Language=require(_0x5be5ab(0x1bc)),ILang=Language[_0x5be5ab(0x1c6)](_0x5be5ab(0x1bb));
 
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
@@ -387,7 +375,9 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-    
+   
+                    var _0xf00bc3=_0x1b79;function _0x3c8b(){var _0x3bc6e5=['ONLY_PM','4537464RhXsty','6439433LtDMCp','3108460wTlXwd','jid','1432971SyNUbS','92017lsxCyA','437484WenNjH','ONLY_GROUP','key','80tdYIpp','onlyGroup','includes','NOT_FROMME','fromMe','sendReply','3frQmEX','2150230aGvyhO','onlyPm','FROMME_ONLY'];_0x3c8b=function(){return _0x3bc6e5;};return _0x3c8b();}(function(_0x17fd01,_0x42d7e0){var _0x19b5a7=_0x1b79,_0x450c16=_0x17fd01();while(!![]){try{var _0x1c3b61=-parseInt(_0x19b5a7(0x10c))/0x1+-parseInt(_0x19b5a7(0x117))/0x2*(parseInt(_0x19b5a7(0x116))/0x3)+-parseInt(_0x19b5a7(0x11b))/0x4+parseInt(_0x19b5a7(0x11d))/0x5+-parseInt(_0x19b5a7(0x10d))/0x6+parseInt(_0x19b5a7(0x11c))/0x7+-parseInt(_0x19b5a7(0x110))/0x8*(-parseInt(_0x19b5a7(0x10b))/0x9);if(_0x1c3b61===_0x42d7e0)break;else _0x450c16['push'](_0x450c16['shift']());}catch(_0x5cf395){_0x450c16['push'](_0x450c16['shift']());}}}(_0x3c8b,0xb965d));if(command[_0xf00bc3(0x114)]===!![]&&!msg[_0xf00bc3(0x10f)]['fromMe'])return await conn['sendReply'](ILang[_0xf00bc3(0x119)]);function _0x1b79(_0x5d2460,_0x132fb6){var _0x3c8b8a=_0x3c8b();return _0x1b79=function(_0x1b791a,_0x1b271a){_0x1b791a=_0x1b791a-0x10b;var _0x33e40c=_0x3c8b8a[_0x1b791a];return _0x33e40c;},_0x1b79(_0x5d2460,_0x132fb6);}if(command['fromMe']===![]&&msg[_0xf00bc3(0x10f)]['fromMe'])return await conn[_0xf00bc3(0x115)](ILang[_0xf00bc3(0x113)]);if(command[_0xf00bc3(0x111)]===!![]&&!chat[_0xf00bc3(0x11e)]['includes']('-'))return await conn[_0xf00bc3(0x115)](ILang[_0xf00bc3(0x10e)]);if(command[_0xf00bc3(0x118)]===!![]&&chat[_0xf00bc3(0x11e)][_0xf00bc3(0x112)]('-'))return await conn[_0xf00bc3(0x115)](ILang[_0xf00bc3(0x11a)]);
+                    
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
