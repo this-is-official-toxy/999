@@ -407,6 +407,12 @@
             "USAGE": "It converts audio to text.",
             "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
         },
+        "info": {
+            "FROMME_ONLY": "*[ ❗️ ] Sorry, This Command Can Only be used by Owner!*",
+            "NOT_FROMME":"*[ ❗️ ] Sorry, This Command Can Only be used When Worktype is public!*",
+            "ONLY_GROUP": "*[ ❗️ ] Sorry, This Command Can Only be used in Groups!*",
+            "ONLY_PM": "*[ ❗️ ] Sorry, This Command Can Only be used in Private Chats!*"
+        },
         "notes": {
             "NOTES_USAGE": "Shows all your existing notes.",
             "NO_SAVED": "You don't have any saved notes.",
