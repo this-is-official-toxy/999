@@ -11,7 +11,7 @@ const {Message, StringSession, Image, Video} = require('./alexa/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
-const Language = require('../language');
+const Language = require('./language');
 const ILang = Language.getString('info');
 
 const heroku = new Heroku({
