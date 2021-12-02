@@ -27,7 +27,6 @@
     "browser-id3-writer": "^4.4.0",
     "playstore-scraper": "^1.0.0",
     "qrcode-reader": "^1.0.4",
-    "captchagen": "^1.2.0",
     "axios": "0.21.1",
     "googlethis": "^1.1.6",
     "audiobuffer-to-wav": "1.0.0",
