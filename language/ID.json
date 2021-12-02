@@ -418,6 +418,12 @@
             "USAGE": "Menerjemahkan kalimat dalam suara menjadi teks.",
             "TEXT": "*Hei! Saya mendengar ini dengan suara!:*\n\n"
         },
+        "info": {
+            "FROMME_ONLY": "*[ ❗️ ] Maaf, Perintah Ini Hanya Dapat Digunakan oleh Pemilik!*",
+            "NOT_FROMME":"*[ ❗️ ] Maaf, Perintah Ini Hanya Dapat Digunakan Saat Worktype bersifat publik!*",
+            "ONLY_GROUP": "*[ ❗️ ] Maaf, Perintah Ini Hanya Dapat Digunakan di Grup!*",
+            "ONLY_PM": "*[ ❗️ ] Maaf, Perintah Ini Hanya Dapat Digunakan di Obrolan Pribadi!*"
+        },
         "notes": {
             "NOTES_USAGE": "Menampilkan semua catatan Anda yang ada.",
             "NO_SAVED": "Anda belum menemukan catatan yang direkam.",
