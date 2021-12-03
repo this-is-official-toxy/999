@@ -14,7 +14,7 @@ let td = Config.WORKTYPE == 'public' ? false : true
     return sonuc.includes(true);
 }
 
-WhatsAlexa.addCommand({pattern: 'tagall ?(.*)', fromMe: td, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'tagall ?(.*)', fromMe: td, desc: TLang.TAGALL_DESC }, (async (message, match) => {
 
 if (Config.WORKTYPE == 'public') {
     var admin = await checkAdmin(message);
