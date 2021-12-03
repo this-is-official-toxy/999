@@ -390,7 +390,10 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
    
-                    var _0x821e=["\x66\x72\x6F\x6D\x4D\x65","\x6B\x65\x79","\x73\x65\x6E\x64\x52\x65\x70\x6C\x79","\x6F\x6E\x6C\x79\x47\x72\x6F\x75\x70","\x2D","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x6A\x69\x64","\x6F\x6E\x6C\x79\x50\x6D"];if(command[_0x821e[0]]=== true&&  !msg[_0x821e[1]][_0x821e[0]]){return  await conn[_0x821e[2]](ILang.FROMME_ONLY)};if(command[_0x821e[0]]=== false&& msg[_0x821e[1]][_0x821e[0]]){return  await conn[_0x821e[2]](ILang.NOT_FROMME)};if(command[_0x821e[3]]=== true&&  !chat[_0x821e[6]][_0x821e[5]](_0x821e[4])){return  await conn[_0x821e[2]](ILang.ONLY_GROUP)};if(command[_0x821e[7]]=== true&& chat[_0x821e[6]][_0x821e[5]](_0x821e[4])){return  await conn[_0x821e[2]](ILang.ONLY_PM)}
+                    if (command.fromMe === true && !msg.key.fromMe) return await conn.sendReply(ILang.FROMME_ONLY)
+                    if (command.fromMe === false && msg.key.fromMe) return await conn.sendReply(ILang.NOT_FROMME)
+                    if (command.onlyGroup === true && !chat.jid.includes('-')) return await conn.sendReply(ILang.ONLY_GROUP)
+                    if (command.onlyPm === true && chat.jid.includes('-')) return await conn.sendReply(ILang.ONLY_PM)
 
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
