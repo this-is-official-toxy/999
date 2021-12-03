@@ -11,7 +11,7 @@ WhatsAlexa.addCommand({pattern: 'leave', fromMe: true, desc: Lang.KICKME_DESC, o
     await message.client.groupLeave(message.jid);
 }));
 
-WhatsAlexa.addCommand({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
+WhatsAlexa.addCommand({pattern: 'setpp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
     if (message.reply_message === false || message.reply_message.image === false) return await message.sendReply(Lang.NEED_PHOTO);
 
     var load = await message.sendReply(Lang.PPING);
