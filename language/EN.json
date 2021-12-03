@@ -27,7 +27,7 @@
             "DELETED": "*✅ Module successfully deleted!*",
             "WARN": "Get plugins only from t.me/remasterplugin channel."
         },
-        "admin": {
+        "group": {
             "BAN_DESC": "Kick someone in the group. Reply to message or tag a person to use command.",
             "IM_NOT_ADMIN": "*I am not admin in this group!*",
             "USER_NOT_ADMIN": "*You are not an admin in this group!*",
