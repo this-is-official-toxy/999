@@ -5,6 +5,7 @@ let FilterDb = require('./sql/filters');
 let Language = require('../language');
 let FLang = Language.getString('filters');
 let Lang = Language.getString('admin');
+let PLang = Language.getString('profile');
 let td = Config.WORKTYPE == 'public' ? false : true
 let isMe = Config.WORKTYPE == 'public' ? 'message.data.participant' : 'message.client.user.jid'
 let NAM = Config.WORKTYPE == 'public' ? Lang.YOURE_NOT_ADMIN : Lang.IM_NOT_ADMIN
@@ -233,6 +234,24 @@ WhatsAlexa.addCommand({pattern: 'setgcname ?(.*)', onlyGroup: true, fromMe: true
     await message.sendReply(Lang.SUC_SNAME + '```' + match[1] + '```');
     }
 ));
+
+WhatsAlexa.addCommand({pattern: 'setgcpp ?(.*)', onlyGroup: true, fromMe: td, desc: Lang.SETPP_DESC}, (async (message, match) => {
+    var im = await checkAdmin(message);
+    if (!im) return await message.sendReply(NAM);
+    
+    if (message.reply_message === false || message.reply_message.image === false) return await message.sendReply(PLang.NEED_PHOTO);
+
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+
+    await message.client.updateProfilePicture(message.jid, fs.readFileSync(location));
+    await message.sendReply(Lang.SUC_SETPP);
+}));
 
 module.exports = {
     checkImAdmin: checkAdmin
