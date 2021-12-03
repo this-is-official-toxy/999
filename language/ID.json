@@ -27,12 +27,15 @@
             "DELETED": "*✅ Plugin berhasil dihapus! Anda harus memulai ulang agar perubahan diterapkan.*",
             "WARN": "Dapatkan plugin hanya dari saluran t.me/remasterplugin."
         },
-        "admin": {
+        "group": {
             "BAN_DESC": "Kick seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
             "IM_NOT_ADMIN": "*Saya bukan admin di grup ini!*",
             "USER_NOT_ADMIN": "*Anda bukan admin di grup ini!*",
             "SET_NAME_DESC": "Mengubah nama grup.",
             "SETPP_DESC": "Mengubah gambar profil grup.",
+            "SETDESC_DESC": "Mengubah Deskripsi grup.",
+            "NEED_WORD_DESC": "*Anda harus memasukkan atau membalas teks apa pun untuk mengatur deskripsi!*",
+            "SUC_SETDESC": "*✅️ Deskripsi Grup Berhasil Mengubah!*",
             "SUC_SETPP": "*✅️ Berhasil mengubah gambar profil grup!*",
             "S_NEED_WORD": "*Anda harus memasukkan nama!*",
             "SUC_SNAME": "*✅ Berhasil mengubah nama Grup menjadi -*",
