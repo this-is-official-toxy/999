@@ -4,7 +4,7 @@ let Config = require('../config');
 let FilterDb = require('./sql/filters');
 let Language = require('../language');
 let FLang = Language.getString('filters');
-let Lang = Language.getString('admin');
+let Lang = Language.getString('group');
 let PLang = Language.getString('profile');
 let td = Config.WORKTYPE == 'public' ? false : true
 let isMe = Config.WORKTYPE == 'public' ? 'message.data.participant' : 'message.client.user.jid'
