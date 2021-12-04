@@ -29,8 +29,8 @@
         },
         "group": {
             "BAN_DESC": "Kick someone in the group. Reply to message or tag a person to use command.",
-            "IM_NOT_ADMIN": "*[ ❗️ ] Sorry, Bot is not an Admin in this Group!*",
-            "USER_NOT_ADMIN": "*[ ❗️ ] Sorry, You are not an admin in this group!*",
+            "IM_NOT_ADMIN": "*I am not an Admin in this Group!*",
+            "USER_NOT_ADMIN": "*You are not an admin in this group!*",
             "SET_NAME_DESC": "Changes the group's name.",
             "SETPP_DESC": "Changes the group's profile picture.",
             "SETDESC_DESC": "Changes the group's Description.",
