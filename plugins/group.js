@@ -7,24 +7,20 @@ let FLang = Language.getString('filters');
 let Lang = Language.getString('group');
 let PLang = Language.getString('profile');
 let td = Config.WORKTYPE == 'public' ? false : true
-let isMe = Config.WORKTYPE == 'public' ? 'message.data.participant' : 'message.client.user.jid'
-let NAM = Config.WORKTYPE == 'public' ? Lang.YOURE_NOT_ADMIN : Lang.IM_NOT_ADMIN
 
- async function checkAdmin(message, user = isMe) {
-   if (Config.WORKTYPE == 'public') {
-        var grup = await message.client.groupMetadata(message.jid);
-        var sonuc = grup['participants'].map((member) => {     
-            if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
-        });
-        return sonuc.includes(true);
-   } else {
-        var grup = await message.client.groupMetadata(message.jid);
-        var sonuc = grup['participants'].map((member) => {
-            if (member.id.split('@')[0] === user.split('@')[0] && member.isAdmin) return true; else; return false;
-        });
-        return sonuc.includes(true);
-    }
+ async function checkUsAdmin(message, user = message.data.participant) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
 }
+async function checkAdmin(message, user = message.client.user.jid) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {
+        if (member.id.split('@')[0] === user.split('@')[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
 
 WhatsAlexa.addCommand({pattern: 'kick ?(.*)', fromMe: td, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     var im = await checkAdmin(message);
