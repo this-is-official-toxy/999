@@ -11,8 +11,6 @@ const {Message, StringSession, Image, Video} = require('./alexa/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
-const Language = require('./language');
-const ILang = Language.getString('info');
 
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
@@ -390,9 +388,6 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
    
-
-                    var _0x13f194=_0x4a4b;(function(_0x3c05ee,_0x53d261){var _0x201ba2=_0x4a4b,_0x58ef0b=_0x3c05ee();while(!![]){try{var _0x20802a=-parseInt(_0x201ba2(0x8b))/0x1+-parseInt(_0x201ba2(0x78))/0x2*(parseInt(_0x201ba2(0x7c))/0x3)+parseInt(_0x201ba2(0x8d))/0x4+parseInt(_0x201ba2(0x80))/0x5*(-parseInt(_0x201ba2(0x83))/0x6)+parseInt(_0x201ba2(0x88))/0x7+parseInt(_0x201ba2(0x8c))/0x8+parseInt(_0x201ba2(0x7d))/0x9*(parseInt(_0x201ba2(0x85))/0xa);if(_0x20802a===_0x53d261)break;else _0x58ef0b['push'](_0x58ef0b['shift']());}catch(_0x54008c){_0x58ef0b['push'](_0x58ef0b['shift']());}}}(_0x2cbd,0xa7583));function _0x2cbd(){var _0x2fc642=['3199268RfZYiH','20BpPQcd','ONLY_GROUP','ONLY_PM','fromMe','92247PHDvYy','198kyEano','data','onlyGroup','860320fHCnlD','sendMessage','includes','42VDfeKC','remoteJid','307700IQolyL','onlyPm','jid','3832766NsqSlb','text','key','1063464EzAqDv','9892400WfWZBg'];_0x2cbd=function(){return _0x2fc642;};return _0x2cbd();}function _0x4a4b(_0x3a417f,_0x1af68c){var _0x2cbd80=_0x2cbd();return _0x4a4b=function(_0x4a4b2a,_0x36f8b1){_0x4a4b2a=_0x4a4b2a-0x78;var _0x17c59b=_0x2cbd80[_0x4a4b2a];return _0x17c59b;},_0x4a4b(_0x3a417f,_0x1af68c);}if(command[_0x13f194(0x7b)]===!![]&&!msg['key'][_0x13f194(0x7b)])return await conn[_0x13f194(0x81)](msg[_0x13f194(0x8a)]['remoteJid'],FROMME_ONLY,MessageType[_0x13f194(0x89)],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':this['data']});if(command[_0x13f194(0x7f)]===!![]&&!chat[_0x13f194(0x87)][_0x13f194(0x82)]('-'))return await conn[_0x13f194(0x81)](msg['key'][_0x13f194(0x84)],ILang[_0x13f194(0x79)],MessageType['text'],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':this['data']});if(command[_0x13f194(0x86)]===!![]&&chat[_0x13f194(0x87)][_0x13f194(0x82)]('-'))return await conn[_0x13f194(0x81)](msg[_0x13f194(0x8a)][_0x13f194(0x84)],ILang[_0x13f194(0x7a)],MessageType[_0x13f194(0x89)],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':this[_0x13f194(0x7e)]});
-
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
