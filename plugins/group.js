@@ -9,7 +9,7 @@ let PLang = Language.getString('profile');
 
 let td = Config.WORKTYPE == 'public' ? false : true
 let who = Config.WORKTYPE == 'public' ? 'message.data.participant' : 'message.client.user.jid'
-let NAM = Config.WORKTYPE == 'public' ? Lang.IM_NOT_ADMIN : Lang.USER_NOT_ADMIN
+let NAM = Config.WORKTYPE == 'public' ? Lang.USER_NOT_ADMIN : Lang.IM_NOT_ADMIN
 
 async function checkAdmin(message, user = who) {
     var grup = await message.client.groupMetadata(message.jid);
