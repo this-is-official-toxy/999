@@ -28,7 +28,6 @@
     "playstore-scraper": "^1.0.0",
     "qrcode-reader": "^1.0.4",
     "axios": "0.21.1",
-    "imgur-upload": "^0.1.2",
     "googlethis": "^1.1.6",
     "audiobuffer-to-wav": "1.0.0",
     "chalk": "^4.1.0",
