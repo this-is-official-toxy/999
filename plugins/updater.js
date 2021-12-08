@@ -24,7 +24,7 @@ WhatsAlexa.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC
             }
         );
         
-        await message.sendReply('```' + degisiklikler + '```');
+        await message.sendReply(degisiklikler);
     }
 }));
 
