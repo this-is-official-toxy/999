@@ -57,7 +57,7 @@ If you are concerned about security, you can install it on your own computer. If
     
 ### 😵 I am facing some errors/bug in Alexa, I want to request a feature or I have some doubts about Alexa, How can I Clear them all? 
   
-You can clear all of them, by contacting the Developer, **[TOXIC DEVIL](https://wa.me/2349053311892)**
+You can clear all of them, by contacting Joining our support group, **[TOXIC DEVIL](https://wa.me/2349053311892)**
 
 ### 📃 How Can I Download the Bot Script?
 
@@ -73,7 +73,7 @@ There are **3 Languages** in this Bot - **English ( US ), Malayalam ( India ), I
 
 ### ❗ Does our number will banned from WhatsApp by Using This Bot?
 
-If you are concerned about that, Then you can just use bot on a [Fake Number](https://youtu.be/v8lGcQp0RjQ). **[Also Read This](https://github.com/TOXIC-DEVIL/WhatsAlexa#-warning-)**
+If you are concerned about that, Then you can just use bot on a [Fake Number](https://youtu.be/lFL6vFSKpEY). **[Also Read This](https://github.com/TOXIC-DEVIL/WhatsAlexa#-warning-)**
 
 ### 🔄 Can I Edit this bot?
 
