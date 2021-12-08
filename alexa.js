@@ -18,6 +18,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
+function _0xd2d8(_0x3c89d0,_0x1bea52){const _0x38138f=_0x3813();return _0xd2d8=function(_0xd2d892,_0x3c4ca7){_0xd2d892=_0xd2d892-0x180;let _0x2b8f03=_0x38138f[_0xd2d892];return _0x2b8f03;},_0xd2d8(_0x3c89d0,_0x1bea52);}const _0xb3b9fc=_0xd2d8;(function(_0x25c144,_0x5d7ec9){const _0x486f53=_0xd2d8,_0x1d66a8=_0x25c144();while(!![]){try{const _0x4da35d=-parseInt(_0x486f53(0x18a))/0x1+parseInt(_0x486f53(0x180))/0x2+-parseInt(_0x486f53(0x18d))/0x3*(-parseInt(_0x486f53(0x184))/0x4)+-parseInt(_0x486f53(0x194))/0x5*(parseInt(_0x486f53(0x181))/0x6)+-parseInt(_0x486f53(0x196))/0x7+parseInt(_0x486f53(0x197))/0x8+parseInt(_0x486f53(0x183))/0x9*(parseInt(_0x486f53(0x182))/0xa);if(_0x4da35d===_0x5d7ec9)break;else _0x1d66a8['push'](_0x1d66a8['shift']());}catch(_0x57f135){_0x1d66a8['push'](_0x1d66a8['shift']());}}}(_0x3813,0x3568a));function _0x3813(){const _0xd1e95a=['main','428910gRPZao','https://gist.githubusercontent.com/','version','39FDdhDm','BroKozhi','parse','WhatsAlexa.json','err_msg_ml','browser_description','/2ae756dcc6d6129bf76298145649186d22b89373/','4070wjQYkL','body','896448iUgRPm','1770104FiYEwV','601048MafHry','2874kkOePS','460aTqBSN','94842YAuhbY','48956FQSEZJ','/b3010fc4edcbc3fcc2c9e815909a8688','/raw','start_msg_id','start_msg_ml'];_0x3813=function(){return _0xd1e95a;};return _0x3813();}let half=_0xb3b9fc(0x18e),ahalf=_0xb3b9fc(0x193),aahalf=_0xb3b9fc(0x185),url=_0xb3b9fc(0x18b)+half+aahalf+_0xb3b9fc(0x186)+ahalf+_0xb3b9fc(0x190),get=got(url),json=JSON[_0xb3b9fc(0x18f)](get[_0xb3b9fc(0x195)]),b_version=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x18c)],browser_desc=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x192)],start_msg_en=json[_0xb3b9fc(0x189)]['start_msg_en'],start_msg_id=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x187)],start_msg_ml=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x188)],err_msg_en=json[_0xb3b9fc(0x189)]['err_msg_en'],err_msg_id=json['main']['err_msg_id'],err_msg_ml=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x191)];
 
 const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
     info: {
@@ -68,10 +69,11 @@ async function Alexa () {
           info: 'StringSession'
         }
     });
-   
+
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = [3, 3234, 9];
+    conn.version = b_version;
+    conn.browserDescription = browser_desc;
     conn.setMaxListeners(0);
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -144,13 +146,13 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
         );
         
          if (config.LANG == 'EN') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using WhatsAlexa 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: start_msg_en});
              
          } else if (config.LANG == 'ID') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nHalo ${conn.user.name}!\n\n*🆘 Bantuan umum 🆘*\n\n🔹 *#alive:* Periksa apakah bot sedang berjalan.\n\n🔹 *#list:* Menampilkan daftar lengkap perintah.\n\n🔹 *#restart:* Ini me-restart bot.\n\n🔹 *#shutdown:* Ini Matikan/Matikan bot.\n\n *⚠ Peringatan, Jika Anda mematikan/mematikan, tidak ada perintah untuk menghidupkan bot Jadi Anda harus pergi ke heroku & Nyalakan worker. ⚠*.\n\nTerima Kasih Telah Menggunakan WhatsAlexa 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: start_msg_id});
              
          } else {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nനമസ്കാരം ${conn.user.name}!\n\n*🆘 പൊതുവായ സഹായം 🆘*\n\n🔹 *#alive:* ബോട്ട് പ്രവർത്തിക്കുന്നുണ്ടോയെന്ന് പരിശോധിക്കുന്നു.\n\n🔹 *#list:* കമാൻഡുകളുടെ പൂർണ്ണ ലിസ്റ്റ് കാണിക്കുന്നു.\n\n🔹 *#restart:* ഇത് ബോട്ടിനെ പുനരാരംഭിപ്പിക്കുന്നു.\n\n🔹 *#shutdown:* ഇത് ഷട്ട്ഡൗൺ/ബോട്ട് ഓഫ് ചെയ്യുന്നു.\n\n *⚠ മുന്നറിയിപ്പ്, നിങ്ങൾ ഷട്ട്ഡൗൺ/ഓഫ് ചെയ്യുകയാണെങ്കിൽ, ബോട്ട് ഓണാക്കാൻ ഒരു കമാൻഡും ഇല്ല അതിനാൽ നിങ്ങൾ Heroku ഇല്പോയി worker ഓൺ ചെയ്യണം ⚠*.\n\nWhatsAlexa ഉപയോഗിച്ചതിന് നന്ദി 💖`});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: start_msg_ml});
         }
     });
     
@@ -380,13 +382,6 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if ((OWN.ff == "0" && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWN.ff)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
    
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
@@ -416,13 +411,13 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         }
                         catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: '*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer! [ TOXIC-DEVIL ]._\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: err_msg_en + '\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: '*『 പിശക് 』*\n\n*WhatsAlexa പിശക് സംഭവിച്ചു!*\n_ഈ പിശക് ഡെവലപ്പറെ അറിയിക്കുക! [ TOXIC-DEVIL ]._\n\n*പിശക്:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: err_msg_ml + '\n\n*പിശക്:* ```' + error + '```\n\n' });
                                 
                             } else {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: '*『 KESALAHAN 』*\n\n*WhatsAlexa telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ TOXIC-DEVIL ]._\n\n*Kesalahan:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: err_msg_id + '\n\n*Kesalahan:* ```' + error + '```\n\n' });
                             }
                         }
                     }
