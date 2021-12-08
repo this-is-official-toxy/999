@@ -18,6 +18,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
+const _0x243ad1=_0x4819;function _0x2d46(){const _0xc0aa31=['3866qToEgx','769a06678d111d551ff935d268349ea28b30d478/','5223920sgcGIz','WhatsAlexa.json','BroKozhi/','2805460IQWlrf','data','822ohjauB','raw/','1363800JVHeTO','542265PboQnz','e17c0080d432c804762be24b094fbfe8/','announcement','1KyBkmh','1104WCNSOf','https://','39159ADBApj','get','27881DRYJtS'];_0x2d46=function(){return _0xc0aa31;};return _0x2d46();}function _0x4819(_0x360681,_0x45ec17){const _0x2d4624=_0x2d46();return _0x4819=function(_0x481987,_0x37d7fa){_0x481987=_0x481987-0x1e3;let _0x45bd02=_0x2d4624[_0x481987];return _0x45bd02;},_0x4819(_0x360681,_0x45ec17);}(function(_0x35e148,_0x474208){const _0x45a30b=_0x4819,_0xb31a55=_0x35e148();while(!![]){try{const _0x2aa358=parseInt(_0x45a30b(0x1ed))/0x1*(parseInt(_0x45a30b(0x1f3))/0x2)+parseInt(_0x45a30b(0x1e9))/0x3+-parseInt(_0x45a30b(0x1e5))/0x4+parseInt(_0x45a30b(0x1ea))/0x5+-parseInt(_0x45a30b(0x1e7))/0x6*(-parseInt(_0x45a30b(0x1f2))/0x7)+parseInt(_0x45a30b(0x1ee))/0x8*(parseInt(_0x45a30b(0x1f0))/0x9)+-parseInt(_0x45a30b(0x1f5))/0xa;if(_0x2aa358===_0x474208)break;else _0xb31a55['push'](_0xb31a55['shift']());}catch(_0x382cf7){_0xb31a55['push'](_0xb31a55['shift']());}}}(_0x2d46,0x76faa));let url=_0x243ad1(0x1ef)+'gist.githubusercontent.com/'+_0x243ad1(0x1e4)+_0x243ad1(0x1eb)+_0x243ad1(0x1e8)+_0x243ad1(0x1f4)+_0x243ad1(0x1e3);await axios[_0x243ad1(0x1f1)](url)['then'](async _0x43f911=>{const _0x37a2f8=_0x243ad1;let _0x3613c9=_0x43f911[_0x37a2f8(0x1e6)][_0x37a2f8(0x1ec)]['EN'],_0x4c156c=_0x43f911[_0x37a2f8(0x1e6)][_0x37a2f8(0x1ec)]['ML'],_0x2dc207=_0x43f911[_0x37a2f8(0x1e6)]['announcement']['ID'],_0x21ce5f=_0x43f911['data']['web_wa_version'];});
 
 const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
     info: {
@@ -71,7 +72,7 @@ async function Alexa () {
    
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = [3, 3234, 9];
+    conn.version = web_wa_version;
     conn.setMaxListeners(0);
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -153,7 +154,14 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
              await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nനമസ്കാരം ${conn.user.name}!\n\n*🆘 പൊതുവായ സഹായം 🆘*\n\n🔹 *#alive:* ബോട്ട് പ്രവർത്തിക്കുന്നുണ്ടോയെന്ന് പരിശോധിക്കുന്നു.\n\n🔹 *#list:* കമാൻഡുകളുടെ പൂർണ്ണ ലിസ്റ്റ് കാണിക്കുന്നു.\n\n🔹 *#restart:* ഇത് ബോട്ടിനെ പുനരാരംഭിപ്പിക്കുന്നു.\n\n🔹 *#shutdown:* ഇത് ഷട്ട്ഡൗൺ/ബോട്ട് ഓഫ് ചെയ്യുന്നു.\n\n *⚠ മുന്നറിയിപ്പ്, നിങ്ങൾ ഷട്ട്ഡൗൺ/ഓഫ് ചെയ്യുകയാണെങ്കിൽ, ബോട്ട് ഓണാക്കാൻ ഒരു കമാൻഡും ഇല്ല അതിനാൽ നിങ്ങൾ Heroku ഇല്പോയി worker ഓൺ ചെയ്യണം ⚠*.\n\n*🤠 ഞങ്ങളുടെ WhatsAlexa Support ഗ്രൂപ്പിൽ ചേരു:* https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 \n\nWhatsAlexa ഉപയോഗിച്ചതിന് നന്ദി 💖`});
         }
     });
-    
+  
+    let ann_msg;
+    if (config.LANG == 'EN') ann_msg = '```📢 Announcement 📢```' + ann_en
+    if (config.LANG == 'ML') ann_msg = '```📢 പ്രഖ്യാപനം 📢```' + ann_ml
+    if (config.LANG == 'ID') ann_msg = '```📢 Pengumuman 📢```' + ann_id
+
+    await conn.sendMessage(conn.user.jid, ann_msg, MessageType.text)
+
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
             if (conn.user.jid.startsWith('90')) { 
