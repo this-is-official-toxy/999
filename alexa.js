@@ -156,9 +156,9 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
     });
   
     let ann_msg;
-    if (config.LANG == 'EN') ann_msg = '```📢 Announcement 📢```' + ann_en
-    if (config.LANG == 'ML') ann_msg = '```📢 പ്രഖ്യാപനം 📢```' + ann_ml
-    if (config.LANG == 'ID') ann_msg = '```📢 Pengumuman 📢```' + ann_id
+    if (config.LANG == 'EN') ann_msg = '```📢 Announcement 📢```\n\n' + ann_en
+    if (config.LANG == 'ML') ann_msg = '```📢 പ്രഖ്യാപനം 📢```\n\n' + ann_ml
+    if (config.LANG == 'ID') ann_msg = '```📢 Pengumuman 📢```\n\n' + ann_id
 
     await conn.sendMessage(conn.user.jid, ann_msg, MessageType.text)
 
