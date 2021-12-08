@@ -26,11 +26,6 @@
             "required": true,
             "value": "false"
         },
-        "ANTI_CALL": {
-            "description": "It makes the bot AntiCall. If someone call the bot, it will block the caller when anti call is enabled.",
-            "required": true,
-            "value": "false"
-        },
         "FULL_ALEXA": {
             "description": "It turns your account to Alexa AI ChatBot.",
             "required": true,
