@@ -22,7 +22,7 @@
             "value": "EN"
         },
         "ANTI_LINK": {
-            "description": "It makes the bot Antilink.",
+            "description": "It makes the bot Antilink. Kick the users who sends link in WhatsApp Groups When the bot is an admin & feature is enabled.",
             "required": true,
             "value": "false"
         },
