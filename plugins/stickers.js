@@ -2,7 +2,6 @@ let WhatsAlexa = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let fs = require('fs');
 let ffmpeg = require('fluent-ffmpeg');
-let { sticker2Video } = require('../src/modules/sticker2Video');
 let {execFile} = require('child_process');
 let cwebp = require('cwebp-bin');
 let Config = require('../config');
