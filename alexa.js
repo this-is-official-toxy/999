@@ -18,7 +18,6 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
-const _0x53f6ea=_0x2c99;(function(_0x4183ee,_0x10c178){const _0x3349aa=_0x2c99,_0x52fa5e=_0x4183ee();while(!![]){try{const _0x4171ae=parseInt(_0x3349aa(0x8d))/0x1*(parseInt(_0x3349aa(0xa5))/0x2)+parseInt(_0x3349aa(0x93))/0x3+-parseInt(_0x3349aa(0x92))/0x4*(parseInt(_0x3349aa(0xab))/0x5)+-parseInt(_0x3349aa(0xa2))/0x6*(parseInt(_0x3349aa(0x95))/0x7)+parseInt(_0x3349aa(0x91))/0x8+-parseInt(_0x3349aa(0x97))/0x9+-parseInt(_0x3349aa(0xae))/0xa*(-parseInt(_0x3349aa(0x9a))/0xb);if(_0x4171ae===_0x10c178)break;else _0x52fa5e['push'](_0x52fa5e['shift']());}catch(_0x383658){_0x52fa5e['push'](_0x52fa5e['shift']());}}}(_0x57a5,0xa8d7a));function _0x2c99(_0x87d128,_0x200179){const _0x57a562=_0x57a5();return _0x2c99=function(_0x2c991c,_0x506a4e){_0x2c991c=_0x2c991c-0x8c;let _0x51a7fb=_0x57a562[_0x2c991c];return _0x51a7fb;},_0x2c99(_0x87d128,_0x200179);}function _0xd2d8(_0x5bdc29,_0x418362){const _0x37f829=_0x3813();return _0xd2d8=function(_0x53ca8d,_0x79a1c9){_0x53ca8d=_0x53ca8d-0x180;let _0x323bcd=_0x37f829[_0x53ca8d];return _0x323bcd;},_0xd2d8(_0x5bdc29,_0x418362);}const _0xb3b9fc=_0xd2d8;(function(_0x4790ec,_0x4cafe1){const _0x26c1af=_0x2c99,_0x4854ca=_0xd2d8,_0x2c179f=_0x4790ec();while(!![]){try{const _0x3f42a9=-parseInt(_0x4854ca(0x18a))/0x1+parseInt(_0x4854ca(0x180))/0x2+-parseInt(_0x4854ca(0x18d))/0x3*(-parseInt(_0x4854ca(0x184))/0x4)+-parseInt(_0x4854ca(0x194))/0x5*(parseInt(_0x4854ca(0x181))/0x6)+-parseInt(_0x4854ca(0x196))/0x7+parseInt(_0x4854ca(0x197))/0x8+parseInt(_0x4854ca(0x183))/0x9*(parseInt(_0x4854ca(0x182))/0xa);if(_0x3f42a9===_0x4cafe1)break;else _0x2c179f[_0x26c1af(0x9f)](_0x2c179f[_0x26c1af(0xa6)]());}catch(_0x5b231d){_0x2c179f[_0x26c1af(0x9f)](_0x2c179f[_0x26c1af(0xa6)]());}}}(_0x3813,0x3568a));function _0x3813(){const _0x465528=_0x2c99,_0x3eb164=[_0x465528(0x99),_0x465528(0x94),_0x465528(0x8f),_0x465528(0x96),'39FDdhDm',_0x465528(0xa3),'parse',_0x465528(0x9b),_0x465528(0xaf),_0x465528(0xa7),_0x465528(0xad),_0x465528(0xac),_0x465528(0xaa),_0x465528(0xa9),_0x465528(0x9c),_0x465528(0x8c),_0x465528(0xa4),_0x465528(0x8e),_0x465528(0x90),'48956FQSEZJ',_0x465528(0x9d),_0x465528(0x98),_0x465528(0xa1),_0x465528(0xa8)];return _0x3813=function(){return _0x3eb164;},_0x3813();}function _0x57a5(){const _0xcfb016=['/raw','main','15338026eOzhpf','WhatsAlexa.json','1770104FiYEwV','/b3010fc4edcbc3fcc2c9e815909a8688','err_msg_id','push','support_gc_link','start_msg_id','3602454oujyAx','BroKozhi','2874kkOePS','232618VsEVKA','shift','browser_description','start_msg_ml','896448iUgRPm','body','10490PlRbDj','4070wjQYkL','/2ae756dcc6d6129bf76298145649186d22b89373/','10XJDrHI','err_msg_ml','601048MafHry','1leLhVy','460aTqBSN','https://gist.githubusercontent.com/','94842YAuhbY','2913880luJDzR','2588ieRpDq','3745071BwbKPa','428910gRPZao','7ChkuRb','version','4264866cPyxmj'];_0x57a5=function(){return _0xcfb016;};return _0x57a5();}let half=_0xb3b9fc(0x18e),ahalf=_0xb3b9fc(0x193),aahalf=_0xb3b9fc(0x185),url=_0xb3b9fc(0x18b)+half+aahalf+_0xb3b9fc(0x186)+ahalf+_0xb3b9fc(0x190),get=got(url),json=JSON[_0xb3b9fc(0x18f)](get[_0xb3b9fc(0x195)]),b_version=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x18c)],browser_desc=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x192)],supportGC=json[_0x53f6ea(0x99)][_0x53f6ea(0xa0)],err_msg_en=json[_0xb3b9fc(0x189)]['err_msg_en'],err_msg_id=json[_0x53f6ea(0x99)][_0x53f6ea(0x9e)],err_msg_ml=json[_0xb3b9fc(0x189)][_0xb3b9fc(0x191)];
 
 const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
     info: {
@@ -69,11 +68,10 @@ async function Alexa () {
           info: 'StringSession'
         }
     });
-
+   
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = b_version;
-    conn.browserDescription = browser_desc;
+    conn.version = [3, 3234, 9];
     conn.setMaxListeners(0);
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -146,13 +144,13 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
         );
         
          if (config.LANG == 'EN') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: start_msg_en});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nHello ${conn.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\n*🤠 Join Our WhatsAlexa Support Group:* https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 \n\nThank You For Using WhatsAlexa 💖`});
              
          } else if (config.LANG == 'ID') {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: start_msg_id});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nHalo ${conn.user.name}!\n\n*🆘 Bantuan umum 🆘*\n\n🔹 *#alive:* Periksa apakah bot sedang berjalan.\n\n🔹 *#list:* Menampilkan daftar lengkap perintah.\n\n🔹 *#restart:* Ini me-restart bot.\n\n🔹 *#shutdown:* Ini Matikan/Matikan bot.\n\n *⚠ Peringatan, Jika Anda mematikan/mematikan, tidak ada perintah untuk menghidupkan bot Jadi Anda harus pergi ke heroku & Nyalakan worker. ⚠*.\n\n*🤠 Bergabunglah dengan Grup Dukungan WhatsAlexa Kami:* https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 \n\nTerima Kasih Telah Menggunakan WhatsAlexa 💖`});
              
          } else {
-             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: start_msg_ml});
+             await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nനമസ്കാരം ${conn.user.name}!\n\n*🆘 പൊതുവായ സഹായം 🆘*\n\n🔹 *#alive:* ബോട്ട് പ്രവർത്തിക്കുന്നുണ്ടോയെന്ന് പരിശോധിക്കുന്നു.\n\n🔹 *#list:* കമാൻഡുകളുടെ പൂർണ്ണ ലിസ്റ്റ് കാണിക്കുന്നു.\n\n🔹 *#restart:* ഇത് ബോട്ടിനെ പുനരാരംഭിപ്പിക്കുന്നു.\n\n🔹 *#shutdown:* ഇത് ഷട്ട്ഡൗൺ/ബോട്ട് ഓഫ് ചെയ്യുന്നു.\n\n *⚠ മുന്നറിയിപ്പ്, നിങ്ങൾ ഷട്ട്ഡൗൺ/ഓഫ് ചെയ്യുകയാണെങ്കിൽ, ബോട്ട് ഓണാക്കാൻ ഒരു കമാൻഡും ഇല്ല അതിനാൽ നിങ്ങൾ Heroku ഇല്പോയി worker ഓൺ ചെയ്യണം ⚠*.\n\n*🤠 ഞങ്ങളുടെ WhatsAlexa Support ഗ്രൂപ്പിൽ ചേരു:* https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 \n\nWhatsAlexa ഉപയോഗിച്ചതിന് നന്ദി 💖`});
         }
     });
     
@@ -347,6 +345,10 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             var abc = config.BLOCKCHAT.split(',');                            
             if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
+        if (config.SUPPORT == '2349053311892-') {     
+            var nsup = config.SUPPORT.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? nsup.includes(msg.key.remoteJid.split('@')[0]) : nsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
 
         events.commands.map(
             async (command) =>  {
@@ -382,6 +384,13 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
+                    if ((OWN.ff == "0" && msg.key.fromMe === false && command.fromMe === true &&
+                        (msg.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWN.ff)
+                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                        if (command.onlyPinned && chat.pin === undefined) return;
+                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
+                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
+                    }
    
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
@@ -411,13 +420,13 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         }
                         catch (error) {
                             if (config.LANG == 'EN') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: err_msg_en + '\n\n*Error:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: '*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer [ TOXIC-DEVIL ], By Joining our Support Group: https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 ._\n\n*Error:* ```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: err_msg_ml + '\n\n*പിശക്:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: '*『 പിശക് 』*\n\n*WhatsAlexa പിശക് സംഭവിച്ചു!*\n_ഈ പിശക് ഡെവലപ്പറെ അറിയിക്കുക [ TOXIC-DEVIL ], ഞങ്ങളുടെ Support ഗ്രൂപ്പിൽ ചേരുന്നതിലൂടെ: https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 ._\n\n*പിശക്:* ```' + error + '```\n\n' });
                                 
                             } else {
-                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: err_msg_id + '\n\n*Kesalahan:* ```' + error + '```\n\n' });
+                                await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: '*『 KESALAHAN 』*\n\n*WhatsAlexa telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ TOXIC-DEVIL ], dengan bergabung dengan grup pendukung kami: https://chat.whatsapp.com/FsyTWS1ppuy0XzWtBbrKU8 ._\n\n*Kesalahan:* ```' + error + '```\n\n' });
                             }
                         }
                     }
