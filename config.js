@@ -48,7 +48,7 @@ module.exports = {
     RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? false : process.env.REMOVE_BG_API_KEY,
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
     DEBUG: DEBUG,
-    SUPPORT: "94768826133-1630756178",
+    SUPPORT: "120363039806907810",
     XTEAM_API: "ab9942f95c09ca89",
     SPDF_API: "XO1eBCihbkFLAw15sHobUGhRQAUJObpf9OhyvKpknXvYAr1OA7lxvRuSOQMrUBbn",
     WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG"
