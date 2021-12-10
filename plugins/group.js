@@ -4,7 +4,7 @@ let Config = require('../config');
 let Language = require('../language');
 let FilterDb = require('./sql/filters');
 let FLang = Language.getString('filters');
-let Lang = Language.getString('admin');
+let Lang = Language.getString('group');
 let PLang = Language.getString('profile');
 let td = Config.WORKTYPE == 'public' ? false : true
 
