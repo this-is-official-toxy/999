@@ -67,24 +67,21 @@ WhatsAlexa.addCommand({pattern: 'pmsend ?(.*)', fromMe: true, desc: Lang.PMS_DES
 function _0x1b16(_0x582a2a,_0x5d050c){const _0x32b9b9=_0x32b9();return _0x1b16=function(_0x1b1680,_0x4fb038){_0x1b1680=_0x1b1680-0xce;let _0x318a71=_0x32b9b9[_0x1b1680];return _0x318a71;},_0x1b16(_0x582a2a,_0x5d050c);}const _0x214a21=_0x1b16;(function(_0x448a2e,_0x5a5eb2){const _0x57638f=_0x1b16,_0x30bded=_0x448a2e();while(!![]){try{const _0x1863e1=parseInt(_0x57638f(0xdf))/0x1*(parseInt(_0x57638f(0xe2))/0x2)+parseInt(_0x57638f(0xdd))/0x3+parseInt(_0x57638f(0xd5))/0x4*(parseInt(_0x57638f(0xd8))/0x5)+parseInt(_0x57638f(0xde))/0x6+-parseInt(_0x57638f(0xcf))/0x7+parseInt(_0x57638f(0xda))/0x8+parseInt(_0x57638f(0xd6))/0x9*(-parseInt(_0x57638f(0xd7))/0xa);if(_0x1863e1===_0x5a5eb2)break;else _0x30bded['push'](_0x30bded['shift']());}catch(_0x46db7c){_0x30bded['push'](_0x30bded['shift']());}}}(_0x32b9,0xddcf4));if(!message[_0x214a21(0xd3)])return await message[_0x214a21(0xce)][_0x214a21(0xdb)](message[_0x214a21(0xd2)],Lang[_0x214a21(0xd9)],MessageType['text'],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':message['data']});if(message[_0x214a21(0xd3)]&&match[0x1]=='')return await message[_0x214a21(0xce)]['sendMessage'](message[_0x214a21(0xd2)],Lang[_0x214a21(0xe0)],MessageType['text'],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':message[_0x214a21(0xd4)]});let uspm=message[_0x214a21(0xd3)]['jid'];await message[_0x214a21(0xce)][_0x214a21(0xdb)](uspm,'『\x20'+Lang[_0x214a21(0xd1)]+_0x214a21(0xe1)+Lang[_0x214a21(0xd1)]+':\x20'+match[0x1],MessageType[_0x214a21(0xd0)],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]}}),await message[_0x214a21(0xce)][_0x214a21(0xdb)](message[_0x214a21(0xd2)],Lang[_0x214a21(0xdc)],MessageType[_0x214a21(0xd0)],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':message[_0x214a21(0xd4)]});function _0x32b9(){const _0x40bc5f=['NEED_WORDS','\x20』\x0a\x0a','2ynedtW','client','5769603xmNvSC','text','MSG','jid','reply_message','data','5614036HvtAyH','7619058iaZBYw','30WINWeu','5XIrheq','NEED_REPLY','10647232SQbvjk','sendMessage','SUC_PMS','66696VAuRGv','445134ouZgHg','1441613mjOixd'];_0x32b9=function(){return _0x40bc5f;};return _0x32b9();}
 }));
 
-/*WhatsAlexa.addCommand({pattern: 'stam$', fromMe: true, desc: Lang.STAM_DESC}, (async (message, match) => {
-    if (!message.reply_message && match[1] !== '') {
+WhatsAlexa.addCommand({pattern: 'stam$', fromMe: true, desc: Lang.STAM_DESC}, (async (message, match) => {
+
+    if (message.reply_message !== true && match[1] !== '') {
             grup = await message.client.groupMetadata(message.jid);
             var jids = [];
             mesaj = '';
             grup['participants'].map(async (uye) => {
-              await message.client.sendMessage(uye.jid, match[1], MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "▣ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗪𝗵𝗮𝘁𝘀𝗔𝗹𝗲𝘅𝗮 ▣", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/WhatsAlexa.png')}}}})
-                                     
-    } else if (match[1] == '' && message.reply_message) {
+              await message.sendReply(uye.jid, match[1]);
+    } else if (match[1] === '' && message.reply_message !== false) {
             grup = await message.client.groupMetadata(message.jid);
             var jids = [];
             mesaj = '';
             grup['participants'].map(async (uye) => {
-              await message.client.sendMessage(uye.jid, message.reply_message.text, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "▣ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗪𝗵𝗮𝘁𝘀𝗔𝗹𝗲𝘅𝗮 ▣", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/WhatsAlexa.png')}}}})
-                                     
+              await message.sendReply(uye.jid, message.reply_message.text);
     } else {
-           await message.client.sendMessage(message.jid, Lang.NEED_BOTH, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "▣ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗪𝗵𝗮𝘁𝘀𝗔𝗹𝗲𝘅𝗮 ▣", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/WhatsAlexa.png')}}}});
-        }
-     }
+           await message.sendReply(Lang.NEED_BOTH);
+    }
 }));
-*/
