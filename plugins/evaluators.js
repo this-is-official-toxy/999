@@ -84,4 +84,5 @@ WhatsAlexa.addCommand({pattern: 'stam$', fromMe: true, desc: Lang.STAM_DESC}, (a
     } else {
            await message.sendReply(Lang.NEED_BOTH);
     }
+     return await message.sendReply(Lang.SUC_PMS);
 }));
