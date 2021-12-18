@@ -77,11 +77,26 @@ async function Alexa () {
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
 
-    if (StrSes_Db.length < 1) {
-        nodb = true;
-        conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
+    if (!config.SESSION.includes('Alexa===eyJj')) {
+       var ext = ''
+       if (!config.SESSION.includes('.js')) ext = config.SESSION + '.js'
+       else ext = config.SESSION
+       if (!fs.existsSync('/root/999/' + config.SESSION)) throw new Error ('Couldn't find the Session Module!')
+       var session_file = fs.readFileSync('/root/999/' + config.SESSION)
+       if (session_file.includes('clientID') session_file = session_file.toString('base64');
+       if (StrSes_Db.length < 1) {
+           nodb = true;
+           conn.loadAuthInfo(Session.deCrypt(session_file)); 
+       } else {
+           conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
+       }
     } else {
-        conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
+       if (StrSes_Db.length < 1) {
+           nodb = true;
+           conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
+       } else {
+           conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
+       }
     }
 
     conn.on ('open', async () => {
