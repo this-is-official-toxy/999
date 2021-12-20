@@ -81,8 +81,8 @@ async function Alexa () {
        var ext = ''
        if (!config.SESSION.includes('.js')) ext = config.SESSION + '.js'
        else ext = config.SESSION
-       if (!fs.existsSync('/root/999/' + config.SESSION)) throw new Error ("Couldn't find the Session Module!")
-       var session_file = fs.readFileSync('/root/999/' + config.SESSION)
+       if (!fs.existsSync('/root/999/' + ext)) throw new Error ("Couldn't find the Session Module! Check wheather the entered file name is correct.")
+       var session_file = fs.readFileSync('/root/999/' + ext)
        if (StrSes_Db.length < 1) {
            nodb = true;
            conn.loadAuthInfo(Session.deCrypt(session_file)); 
